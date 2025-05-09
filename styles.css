@@ -737,7 +737,7 @@ footer.hidden {
   width: 100vw;
   height: 100vh;
   flex-shrink: 0;
-  padding: 3rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -865,7 +865,25 @@ footer.hidden {
   }
 }
 
-.sez-cont-1,
+.sez-cont-1{
+  border-bottom: 0.1px solid rgb(210, 0, 0);
+  border-right: 0.1px solid rgb(210, 0, 0);
+  background-color: rgba(0, 0, 0, 0.851);
+  width: 90%;
+  margin: auto;
+  font-size: 1.2em;
+  font-weight: 300;
+  height: auto;
+  padding: 6vh;
+  color: white;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.921);
+}
+
+
 .sez-cont-3 {
   border-bottom: 0.1px solid rgb(210, 0, 0);
   border-right: 0.1px solid rgb(210, 0, 0);
