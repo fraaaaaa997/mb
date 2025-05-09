@@ -185,7 +185,9 @@
 /* 480 - telefono --------------------------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
 
-    
+    .hero {
+        height: 52vh;
+    }
 
     .mappa-text {
         margin-top: 20px;
