@@ -55,10 +55,48 @@
 
 /* -----------------------------------------------------------------------------------------------------*/
 /* #768 -  tablet ------------------------------------------------------------------------------------- */
-
 @media (max-width: 768px) {
+    h1.slide-in-left {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        margin: 0;
+      }
+
+
+    .bottom-right h4 {
+      font-size: 1rem;
+    }
+  
+    .bottom-right p {
+      font-size: 0.9rem;
+      
+    }
+
+    .bottom-right {
+        bottom: 10px;
+        right: 10px !important;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 12px;
+      }
+
+      h5 {
+        padding-left: 9px;
+      }
+  }
+
+ 
+
+  
+  
+@media (max-width: 768px) {
+   
     .hero-content h1 {
-        font-size: 32px;
+        font-size: 26px;
     }
 
     .hamburger {
@@ -117,15 +155,15 @@
 
     .immagini {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
-        margin: 10px auto;
+        margin: 3px auto;
     }
 
     .immagini-2 {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
         justify-content: center;
         align-items: center;
         margin: 10px auto;
@@ -141,15 +179,94 @@
         padding-left: 16px;
     }
 
-
 }
 
 /* -----------------------------------------------------------------------------------------------------*/
 /* 480 - telefono --------------------------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
 
+    .mappa-text {
+        margin-top: 20px;
+    
+    }
+    .mappa-text p {
+        font-size: 16px; /* Rimpicciolisce il testo */
+        
+        padding: 10px;
+      }
 
+      .mappa-text h2 {
+        font-size: 30px; /* Rimpicciolisce il testo */
+        padding: 10px;
+      }
 
+      .sez-contatti {
+        font-size: 14px;
+        padding: 20px auto;
+      }
+
+    #sez-mappa {
+        padding: 10px;
+
+        
+    }
+
+    .carousel-container {
+        display: none;
+    }
+
+    .sez-cont-2 {
+        margin-bottom: 10vh;
+    }
+
+    #disegno {
+        font-size: 24px;
+    }
+    #personalizza {
+        font-size: 24px;
+    }
+    #prototipiid {
+        font-size: 24px;
+    }
+    #ricambisticaid {
+        font-size: 24px;
+    }
+
+    .immagini {
+        flex-direction: column;
+        padding: 5px;
+        gap: 10px;
+        width: 90%;
+        box-shadow: none;
+      }
+    
+      .immagini img {
+        width: 80%;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .immagini-2 {
+        flex-direction: column;
+        padding: 5px;
+        gap: 10px;
+        width: 90%;
+        box-shadow: none;
+      }
+    
+      .immagini-2 img {
+        width: 80%;
+        height: auto;
+        max-width: 100%;
+      }
+
+    .sez-cont-1 {
+        flex-direction: column;
+        padding: 4vh 5vw;
+        gap: 15px;
+        width: 95%;
+      }
+   
     .storia-text {
         padding: 20px !important;
         font-size: 16px;
@@ -219,3 +336,8 @@
         margin-bottom: 6px;
     }
 }
+
+
+h1.slide-in-left {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
