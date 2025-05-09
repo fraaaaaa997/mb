@@ -75,7 +75,7 @@
     }
 
     .bottom-right {
-        bottom: 10px;
+        bottom: 10vh !important;
         right: 10px !important;
     }
 
@@ -185,6 +185,8 @@
 /* 480 - telefono --------------------------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
 
+    
+
     .mappa-text {
         margin-top: 20px;
     
@@ -220,16 +222,17 @@
     }
 
     #disegno {
-        font-size: 24px;
+        font-size: 20px;
+        text-align: center;
     }
     #personalizza {
-        font-size: 24px;
+        font-size: 20px;
     }
     #prototipiid {
-        font-size: 24px;
+        font-size: 20px;
     }
     #ricambisticaid {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .immagini {
@@ -262,7 +265,7 @@
 
     .sez-cont-1 {
         flex-direction: column;
-        padding: 4vh 5vw;
+        padding: 0;
         gap: 15px;
         width: 95%;
       }
