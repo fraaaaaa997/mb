@@ -92,7 +92,7 @@ h5.visible {
   left: 40px;
   font-weight: 450;
   margin: 0;
-  font-size: 3rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   color: rgb(27, 0, 0);
   background: linear-gradient(150deg, #ffffff91 30%, #ffffff0c, #ffffff48 70%);
   border-radius: 60px 30px;
@@ -494,7 +494,7 @@ nav {
 .mappa-text {
   margin-top: 20vh;
   flex: 1 1 300px;
-  min-height: 50vh;
+  min-height: 30vh;
   /* Imposta una altezza minima per prevenire il taglio del contenuto */
 }
 
