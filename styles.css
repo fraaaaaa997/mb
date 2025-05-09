@@ -853,6 +853,8 @@ footer.hidden {
 /* STORIA --------------------------------------------------------------------------------------------- */
 
 .storia-cont {
+  margin-top: 20px;
+  margin-bottom: 20px;
   flex-direction: column;
   gap: 30px;
 
