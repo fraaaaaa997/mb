@@ -1,368 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Meccanica Berluti</title>
 
   <link rel="stylesheet" href="styles.css" />
-  <title>sberlux</title>
+  <link rel="stylesheet" href="media.css" />
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
+
 <body>
- <nav>
-  <div class="nav-cont">
-    <div class="logo">
-      <img id="logo" src="img/sberlux-1.png" alt="Logo Sberlux" />
+  <!-- NAV -->
+  <nav>
+    <div class="nav-cont">
+
+      <div class="logo">
+        <a href="index.html"><img id="logo" src="img/sberlux-1.png" alt="logo" /></a>
+      </div>
+
+      <!-- <div class="text-nav">
+                MECCANICA 
+                BERLUTI
+              </div> -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- bottoni -->
+      <ul class="nav-links">
+        <li><a href="#storia">La nostra storia</a></li>
+        <li class="dropdown">
+          <a href="#servizi">I nostri servizi</a>
+          <ul class="dropdown-menu">
+            <li><a href="#disegno">Particolari a disegno e gruppi assemblati</a></li>
+            <li><a href="#personalizza">Personalizzazioni</a></li>
+            <li><a href="#proto">Prototipi</a></li>
+            <li><a href="#ricambia">Ricambistica</a></li>
+
+          </ul>
+        </li>
+        <li><a href="#parco">Parco macchine</a></li>
+
+        <li><a href="#sez-mappa">Dove trovarci</a></li>
+        <li><a href="#sez-contatti">Contatti</a></li>
+      </ul>
     </div>
 
-    <div class="text-nav">
-      MECCANICA 
-      BERLUTI
-    </div>
+  </nav>
 
-    <ul class="nav-links">
-      <li><a href="#">La nostra storia</a></li>
-      <li><a href="#">Parco macchine</a></li>
-      <li class="dropdown">
-        <a href="#">I nostri servizi</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Particolari a disegno e gruppi assemblati</a></li>
-          <li><a href="#">Personalizzazioni</a></li>
-          <li><a href="#">Prototipi</a></li>
-          <li><a href="#">Ricambistica</a></li>
-          
-        </ul>
-      </li>
-      <li><a href="#">Dove trovarci</a></li>
-      <li><a href="#">Contatti</a></li>
-    </ul>
-  </div>
-</nav>
 
-<!-- prima pagina -->
-<section>
-    <div class="section-cont"> 
- 
-  <div>
-    
-  </div>
-    <!-- <img src="http://www.meccanicaberluti.it/temp/image/babbo.JPG" height="350px"> -->
-</div>
-</section>
-
-<!-- la nostra storia -->
-<section id="parco-macchine">
-
-<div class="text">
-  <h2> la nostra storia</h2>
-  <div class="center">
-    <p>
-  Meccanica Berluti è un'azienda a conduzione familiare specializzata nella produzione e nell'assemblaggio conto terzi di componenti meccanici su disegno del cliente.
-</p></div>
-  <div class="aaa">
-    <img src="img/1972.png" height="250px" width="auto" alt="">
-  
-    <br><br> Fondata nel 1998, nasce dall’esperienza e dalla passione di Mario Berluti, che ha trasmesso i suoi valori e la sua competenza ai figli Andrea e Federico.
-    <br><br> La nostra storia affonda le radici negli anni '70, quando Andrea e Federico, dopo un periodo da dipendenti presso la OMAS S.p.A., ebbero l’opportunità – grazie alla fiducia di Sbrollini e Antognoni (titolari di OMAS) – di fondare insieme a Mario Olivetti la OMUS nel 1972. 
-    <br>Da questa esperienza imprenditoriale è poi nata Meccanica Berluti.
-    <br><br>
-  </div>
-    <br>
-
-<div class="aaab">
-
-Oggi realizziamo lavorazioni meccaniche di precisione e ricambi speciali per diversi settori industriali. I nostri principali clienti sono costruttori di macchine utensili, impianti di produzione, sistemi di packaging e aziende operanti nella meccanica generale.
-<img src="img/2025.png" height="250px" width="auto" alt="">
-
-</div>
-</div>
-</section>
-<!-- servizi  -->
-<section id="servizi">
-  <h2>Cosa realizziamo</h2>
-  <p>
-    Eseguiamo lavorazioni di foratura, fresatura, tornitura e rettifica su una vasta gamma di materiali, 
-    in base alle esigenze del cliente, sia da disegno cartaceo che da file CAD.
-  </p>
-  <p>
-    Realizziamo sia prototipi che lavorazioni in serie, garantendo tempi di consegna rapidi grazie alla nostra flessibilità, 
-    dimensione aziendale contenuta e gestione familiare.
-  </p>
-  <p>
-    La tecnologia a nostra disposizione ci consente lavorazioni di alta precisione. La nostra sala di collaudo è dotata 
-    di una macchina di misura tridimensionale automatica, assicurando il controllo qualità dei pezzi prodotti.
-  </p>
-  <p>
-    Eseguiamo giornalmente consegne per i nostri clienti principali. Gestiamo anche lavorazioni esterne come:
-  </p>
-  <ul>
-    <li>Brunitura</li>
-    <li>Zincatura</li>
-    <li>Cromatura</li>
-    <li>Trattamenti termici</li>
-    <li>Niploy</li>
-    <li>Metallizzazione</li>
-    <li>Vulcanizzazione</li>
-    <li>Teflonatura</li>
-    <li>Anodica dura o decorativa</li>
-  </ul>
-  <p>
-    Ogni pezzo trattato viene consegnato completo di <strong>certificato di collaudo</strong>.
-  </p>
-  <p>
-    Siamo inoltre in grado di eseguire <u>montaggi di gruppi o componenti</u> su distinta fornita dai nostri clienti.
-    Offriamo anche un servizio di gestione del magazzino per clienti selezionati, 
-    evitando loro giacenze e ottimizzando le consegne just-in-time per il montaggio.
-  </p>
-  <br>
-  <!-- Particolari a disegno e gruppi assemblati -->
-  <div class="servizio">
-    <h3>Particolari a disegno e gruppi assemblati</h3>
-    <div class="carousel-container">
-      <div class="carousel">
-        <div class="slide active">
-          <img src="img/particolari/1.JPG" alt="Particolare 1" />
-          <div class="caption">Particolare meccanico a disegno</div>
+  <!-- PRIMA PAGINA -->
+  <!-- <img src="http://www.meccanicaberluti.it/temp/image/babbo.JPG" height="350px"> -->
+  <section>
+    <div class="hero">
+      <div class="hero-content">
+        <h1 class="slide-in-left">MECCANICA BERLUTI</h1>
+        <div class="bottom-right">
+          <h4 class="slide-in-right delay-1">Precisione Meccanica su Misura</h4>
+          <p class="slide-in-right delay-2">
+            Dal disegno al prodotto finito.<br>
+            Qualità, esperienza e innovazione, <br>
+            <i>dal 1998.</i>
+          </p>
         </div>
-        <div class="slide">
-          <img src="img/particolari/2.JPG" alt="Particolare 2" />
-          <div class="caption">Particolare meccanico a disegno</div>
-        </div>
-        <div class="slide">
-          <img src="img/particolari/03122008505.jpg" alt="Particolare 3" />
-          <div class="caption">Premontaggio di particolari a disegno</div>
-        </div>
-        <div class="slide">
-          <img src="img/particolari/4.JPG" alt="Particolare 3" />
-          <div class="caption">Particolare a disegno</div>
-        </div>
-        <div class="slide">
-          <img src="img/particolari/5.JPG" alt="Particolare 3" />
-          <div class="caption">Premontaggio di particolari a disegno</div>
-        </div>
-        <div class="slide">
-          <img src="img/particolari/6.JPG" alt="Particolare 3" />
-          <div class="caption">Particolare saldato e assemblato di medie dimensioni</div>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
       </div>
     </div>
-    
-    <br>
-      <p class="riassunto">Produzione su misura a partire da disegni tecnici, con possibilità di assemblaggio completo.</p>
-    <p class="descrizione">Eseguiamo lavorazioni su componenti meccanici complessi a partire da disegni forniti dai clienti, assicurando precisione e affidabilità. I gruppi vengono assemblati seguendo la distinta base del cliente, con controlli qualità su ogni fase del processo, in 24/48 ore.</p>
-  </div>
-<br> <br> <br> <br> <br>
-  <!-- Personalizzazioni -->
-  <div class="servizio">
-   
-    <h3>Personalizzazioni</h3>
-    <br>
-    <div class="testo">
-    <p class="riassunto">Adattiamo i prodotti alle specifiche esigenze del cliente.</p>
-    <p class="descrizione">Grazie alla nostra flessibilità produttiva, possiamo personalizzare forme, materiali e trattamenti di superficie per adattarci perfettamente alle necessità tecniche e funzionali di ogni cliente.</p>
-  </div>
-    <div class="custom-carousel-container">
-      <div class="custom-carousel">
-        <div class="custom-slide active">
-          <img src="img/personalizzazioni/1.jpg" alt="Particolare 1" />
-          <div class="custom-caption">Bocchettone "scarico rapido" serbatoio Ducati AMA Superbike</div>
-        </div>
-        <div class="custom-slide">
-          <img src="img/personalizzazioni/2.jpg" alt="Particolare 2" />
-          <div class="custom-caption">Piastra attacco forcelle a disegno</div>
-        </div>
-        <div class="custom-slide">
-          <img src="img/personalizzazioni/3.jpg" alt="Particolare 3" />
-          <div class="custom-caption">Tappo serbatoio "racing"</div>
-        </div>
-        <div class="custom-slide">
-          <img src="img/personalizzazioni/4.jpg" alt="Particolare 3" />
-          <div class="custom-caption">Raiser personalizzati a disegno</div>
-        </div>
-        <div class="custom-slide">
-          <img src="img/personalizzazioni/5.jpg" alt="Particolare 3" />
-          <div class="custom-caption">Coperchio pompa frizione personalizzato</div>
-        </div>
-        <div class="custom-slide">
-          <img src="img/personalizzazioni/6.jpg" alt="Particolare 3" />
-          <div class="custom-caption">Innesto tubo pompa freno posteriore modificato per minor ingombro e maggior accessibilità</div>
-        </div>
-      </div>
-      <div class="custom-carousel-controls">
-        <button class="custom-prev">&#10094;</button>
-        <button class="custom-next">&#10095;</button>
-      </div>
-    </div>
-    
+  </section>
 
-  </div>
-<br> 
-  <!-- Prototipi -->
-  <div class="prototipi">
-    
-    <h3>Prototipi</h3>
-    <br>
-    <div class="prototipi-content">
-      <div class="testo">
-        <p class="riassunto">Realizziamo prototipi funzionali in tempi rapidi.</p>
-        <p class="descrizione">Offriamo un servizio dedicato alla prototipazione, ideale per test e validazione tecnica prima della produzione in serie. Utilizziamo materiali e tecnologie avanzate per simulare fedelmente il prodotto finale.</p>
-      </div>
-      <div class="immagine-prototipi">
-        <img src="img/prototipi.jpg" alt="Prototipo meccanico" />
-      </div>
-    </div>
-  </div>
-  
 
-  <!-- Ricambistica -->
-  <div class="servizio">
-    <h3>Ricambistica</h3>
-    <br>
-    <div class="testo">
-      <p class="riassunto">Produzione e fornitura di ricambi speciali e fuori standard.</p>
-      <p class="descrizione">Siamo specializzati nella realizzazione di ricambi su richiesta, anche fuori produzione, assicurando compatibilità e prestazioni equivalenti agli originali. Disponiamo inoltre di un sistema di consegna rapida per i nostri clienti principali.</p>
-    </div>
-  
-    <div class="custom-carousel-container">
-      <div class="custom-carousel">
-        <div class="custom-slide active">
-          <img src="img/ricambistica1.JPG" alt="Ricambio 1" />
-          <div class="custom-caption">Testa per macchina foratrice da legno</div>
-        </div>
-        <div class="custom-slide">
-          <img src="img/ricambistica2.JPG" alt="Ricambio 2" />
-          <div class="custom-caption">Coperchio cambio estraibile team motogp</div>
-        </div>
-        <!-- Aggiungi qui altre slide se necessario -->
-      </div>
-  
-      <div class="custom-carousel-controls">
-        <button class="custom-prev">&#10094;</button>
-        <button class="custom-next">&#10095;</button>
-      </div>
-    </div>
-  </div>
-  
-</section>
-<!-- parco macchine -->
- <br> 
-<section id="parco-macchine">
-  <h2>il nostro parco macchine</h2>
-  <p>
-    Il nostro parco macchine è composto da numerosi centri di lavoro verticali, orizzontali, torni CNC e macchinari tradizionali.
-    Disponiamo di attrezzature moderne e diversificate che ci consentono di realizzare lavorazioni complesse con precisione e flessibilità.
-  </p>
 
-  <h3>🔧 Centri di lavoro e torni CNC</h3>
-  <ul>
-    <li>Centro di tornitura PUMA 2600 SY-2</li>
-    <li>Centro di lavoro verticale alta velocità DOOSAN DNM 5700 (2022)</li>
-    <li>n°2 Centri di lavoro verticale alta velocità DOOSAN DNM 4500 (2017)</li>
-    <li>Centro di lavoro orizzontale pallet 400 Kitamura HX400i (2009)</li>
-    <li>n°2 Centri di lavoro orizzontale Doosan HC500 pallet 500 (2014–2016)</li>
-    <li>n°2 Centri di lavoro AERRE CL 70200 (corse 2000×700×750) (2000–2016)</li>
-    <li>n°4 Centri di lavoro AERRE CL 55150 (corse 1500×600×600)</li>
-    <li>n°7 Centri di lavoro verticali AERRE CL 4080 (corse 800×400×500)</li>
-    <li>Centro di lavoro montante mobile FAGIMA FAST 160 (corse 1600×700×700), con 4° asse D.300</li>
-    <li>Centro di lavoro montante mobile FAGIMA FAST 200 (corse 2000×700×500), tavola indexata</li>
-    <li>Centro di lavoro montante mobile FAGIMA SPIN ARROW 320 (corse 3200×800×800), tavola basculante con 5 assi controllati</li>
-    <li>Fresatrice OMV BPF-3 con testa asse B in continuo e tavola Nikken (corse 1500×700×700)</li>
-    <li>Centro di tornitura AVM Angelini DG13 (300×800) con braccetto di scarico</li>
-    <li>Tornio visualizzato da 1500 mm Tovaglieri</li>
-  </ul>
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Meccanica Berluti S.R.L.</strong></p>
+    <p>P.IVA 02524370422 – Capitale sociale € 100.000,00 i.v.</p>
+    <p>Iscritta al Registro Imprese di Ancona n. 02524370422</p>
+    <p>Iscritta al R.E.A. di Ancona n. 195095</p>
+    <p><i>&copy; 2025 Meccanica Berluti – Tutti i diritti riservati</i></p>
+  </footer>
 
-  <h3>🛠️ Altre macchine e attrezzature</h3>
-  <ul>
-    <li>Lapidello ALPA 1000×300</li>
-    <li>Troncatrice ad alta velocità per alluminio</li>
-    <li>Sega a nastro MEP</li>
-    <li>Sega Kasto a CN, larghezza taglio 300 mm (2009)</li>
-    <li>Vari trapani a colonna</li>
-    <li>Piccolo reparto saldatura a filo e castolin</li>
-  </ul>
 
-  <h3>📏 Controllo qualità e metrologia</h3>
-  <ul>
-    <li>Macchina di misura tridimensionale automatica COORD3</li>
-    <li>n°2 Altimetri Mitutoyo LH600 B</li>
-    <li>Rugosimetro Mitutoyo</li>
-    <li>Sala metrologica climatizzata</li>
-  </ul>
 
-  <h3>📐 Strumenti di presetting</h3>
-  <ul>
-    <li>Presetting Conti</li>
-    <li>Presetting ELBO controlli, motorizzato con proiettore di profili</li>
-    <li>Presetting Demm</li>
-  </ul>
 
-  <h3>🔍 Marcatura</h3>
-  <ul>
-    <li>Marcatore laser AUTOMATOR (area utile 110×110 mm)</li>
-  </ul>
-</section>
+  <!-- prima sezione - LA NOSTRA STORIA-->
+   <h5 id="storia">La nostra storia</h5>
+  <section class="sez-cont-1" >
+    <div class="storia-cont">
+
+      <p>
+        Meccanica Berluti è un'azienda a conduzione familiare specializzata nella produzione e nell'assemblaggio conto terzi di componenti meccanici su disegno del cliente.
+      </p>
 <br>
+<div class="immagini">
+  <img id="ombra-img" src="img/1972.png" height="200px" width="auto" alt="">
+  <img id="ombra-img" src="img/babbo.JPG" height="200px" width="auto" alt="">
+</div>
+      <div class="storia-text">
+      
+        <br><br> Fondata nel 1998, nasce dall’esperienza e dalla passione di Mario Berluti, che ha trasmesso i suoi valori e la sua competenza ai figli Andrea e Federico.
+        <br><br> La nostra storia affonda le radici negli anni '70, quando Andrea e Federico, dopo un periodo da dipendenti presso la OMAS S.p.A., ebbero l’opportunità – grazie alla fiducia di Sbrollini e Antognoni (titolari di OMAS) – di fondare insieme a Mario Olivetti la OMUS nel 1972. 
+        <br>Da questa esperienza imprenditoriale è poi nata Meccanica Berluti.
+        <br><br>
+
+      
+      </div>
+
+     
+<div class="immagini-2">
+  <img id="ombra-img" src="img/IMG_8434.JPG" height="200px" width="auto" alt="">
+
+        <img id="ombra-img"  src="img/2025.png" height="200px" width="auto" alt="">
+
+      </div>
+
+      <br><br>
+      <div class="storia-text-2">
+
+        Oggi realizziamo lavorazioni meccaniche di precisione e ricambi speciali per diversi settori industriali. I nostri principali clienti sono costruttori di macchine utensili, impianti di produzione, sistemi di packaging e aziende operanti nella meccanica generale.
+        
+        
+        </div>
+    </div>
+  </section>
+
+  <!-- seconda sezione - I NOSTRI SERVIZI -->
+
+  <h5 id="servizi" >I nostri servizi</h5>
+  <section class="sez-cont-2">
 
 
-<br>
-<!-- dove siamo -->
-<section id="mappa">
-  <div class="mappa">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23064.482694403916!2d13.17256550449205!3d43.73007341766521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d7338df0d2fc1%3A0xde2d49f6cb0e6c12!2sMeccanica%20Berluti%20S.R.L.!5e0!3m2!1sit!2sit!4v1613116222872!5m2!1sit!2sit" width="430" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-  <div class="mappa-text">
-    <h2>Dove siamo</h2>
-    <br>
     <p>
-      Via A. Modigliani, 27
-      <br>
-      60019, Senigallia, AN
+      Eseguiamo lavorazioni di <u>foratura, fresatura, tornitura e rettifica</u> su una vasta gamma di materiali,
+      in base alle esigenze del cliente, sia da disegno cartaceo che da file CAD.
     </p>
+    <p>
+      Realizziamo sia <u>prototipi</u> che <u>lavorazioni in serie</u>, garantendo tempi di consegna rapidi grazie alla nostra
+      flessibilità.
+    </p>
+    <p>
+      La tecnologia a nostra disposizione ci consente lavorazioni di alta precisione. La nostra sala di collaudo è
+      dotata
+      di una macchina di misura tridimensionale automatica, assicurando il controllo qualità dei pezzi prodotti.
+    </p>
+    <p>
+      Eseguiamo giornalmente consegne per i nostri clienti principali.
+      <br><br> Gestiamo anche lavorazioni esterne come:
+    </p>
+    <ul id="Brunitura">
+      <li>Brunitura</li>
+      <li>Zincatura</li>
+      <li>Cromatura</li>
+      <li>Trattamenti termici</li>
+      <li>Niploy</li>
+      <li>Metallizzazione</li>
+      <li>Vulcanizzazione</li>
+      <li>Teflonatura</li>
+      <li>Anodica dura o decorativa</li>
+    </ul>
+    
+    <p>
+      Ogni pezzo trattato viene consegnato completo di <strong>certificato di collaudo</strong>.
+    </p>
+    <p>
+      Siamo inoltre in grado di eseguire <u>montaggi di gruppi o componenti</u> su distinta fornita dai nostri clienti.
+      Offriamo anche un servizio di <u>gestione del magazzino </u>per clienti selezionati,
+      evitando loro giacenze e ottimizzando le consegne just-in-time per il montaggio.
+    </p>
+<br>
+    <p>
+      <b>Febbraio 2021:</b> <u> Certificazione ISO 9001:2015. </u>
+    </p>
+
+  </section>
+
+  <!-- terza sezione - SCROLL ORIZZONTALE -->
+
+  <div class="sticky-wrapper" id="scroll-section">
+    <div class="horizontal-scroll">
+      <div class="scroll-content" id="scroll-content">
+
+        <div class="section">
+          <!-- testo -->
+          <h2 id="disegno">Particolari a disegno e gruppi assemblati</h2>
+          <p class="riassunto">Produzione su misura a partire da disegni tecnici, con possibilità di assemblaggio
+            completo.</p>
+          <p class="descrizione">Eseguiamo lavorazioni su componenti meccanici complessi a partire da disegni forniti
+            dai
+            clienti, assicurando precisione e affidabilità.
+            <br> I gruppi vengono assemblati seguendo la distinta base del cliente, con controlli qualità su ogni fase
+            del
+            processo, in 24/48 ore.
+          </p>
+          <!-- carosello -->
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="slide active">
+                <img src="img/particolari/1.JPG" alt="Particolare 1" />
+                <div class="caption">Particolare meccanico a disegno</div>
+              </div>
+              <div class="slide">
+                <img src="img/particolari/2.JPG" alt="Particolare 2" />
+                <div class="caption">Particolare meccanico a disegno</div>
+              </div>
+              <div class="slide">
+                <img src="img/particolari/03122008505.jpg" alt="Particolare 3" />
+                <div class="caption">Premontaggio di particolari a disegno</div>
+              </div>
+              <div class="slide">
+                <img src="img/particolari/4.JPG" alt="Particolare 4" />
+                <div class="caption">Particolare a disegno</div>
+              </div>
+              <div class="slide">
+                <img src="img/particolari/5.JPG" alt="Particolare 5" />
+                <div class="caption">Premontaggio di particolari a disegno</div>
+              </div>
+              <div class="slide">
+                <img src="img/particolari/6.JPG" alt="Particolare 6" />
+                <div class="caption">Particolare saldato e assemblato di medie dimensioni</div>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+            </div>
+          </div>
+
+        </div>
+        <!-- ------ -->
+        <!-- SEZIONE 2: PERSONALIZZAZIONI -->
+        <div class="section" >
+          <h2 id="personalizza">Personalizzazioni</h2>
+          <p class="riassunto">Adattiamo i prodotti alle tue esigenze.</p>
+          <p class="descrizione">Grazie alla nostra flessibilità produttiva, possiamo personalizzare forme, materiali e
+            trattamenti di superficie per adattarci perfettamente alle necessità tecniche e funzionali di ogni cliente.
+          </p>
+
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="slide active">
+                <img src="img/personalizzazioni/1.jpg" alt="Personalizzazione 1" />
+                <div class="caption">Bocchettone "scarico rapido" serbatoio Ducati AMA Superbike</div>
+              </div>
+              <div class="slide">
+                <img src="img/personalizzazioni/2.jpg" alt="Personalizzazione 2" />
+                <div class="caption">Piastra attacco forcelle a disegno</div>
+              </div>
+              <div class="slide">
+                <img src="img/personalizzazioni/3.jpg" alt="Personalizzazione 3" />
+                <div class="caption">Tappo serbatoio "racing"</div>
+              </div>
+              <div class="slide">
+                <img src="img/personalizzazioni/4.jpg" alt="Personalizzazione 4" />
+                <div class="caption">Raiser personalizzati a disegno</div>
+              </div>
+              <div class="slide">
+                <img src="img/personalizzazioni/5.jpg" alt="Personalizzazione 5" />
+                <div class="caption">Coperchio pompa frizione personalizzato</div>
+              </div>
+              <div class="slide">
+                <img src="img/personalizzazioni/6.jpg" alt="Personalizzazione 6" />
+                <div class="caption">Innesto tubo pompa freno posteriore modificato</div>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEZIONE 3: PROTOTIPI -->
+        <div class="section" id="proto">
+          <h2>Prototipi</h2>
+          <p class="riassunto">Realizziamo prototipi funzionali in tempi rapidi.</p>
+          <p class="descrizione">Offriamo un servizio dedicato alla prototipazione, ideale per test e validazione
+            tecnica
+            prima della produzione in serie. Utilizziamo materiali e tecnologie avanzate per simulare fedelmente il
+            prodotto finale.</p>
+
+          <div class="immagine-singola">
+            <img src="img/prototipi.jpg" alt="Prototipo meccanico" />
+            <!-- <div class="caption">Prototipo meccanico realizzato internamente</div> -->
+          </div>
+        </div>
+
+
+        <!-- SEZIONE 4: RICAMBISTICA -->
+        <div class="section" id="ricambia">
+          <h2>Ricambistica</h2>
+          <p class="riassunto">Produzione e fornitura di ricambi speciali e fuori standard.</p>
+          <p class="descrizione">Siamo specializzati nella realizzazione di ricambi su richiesta, anche fuori
+            produzione,
+            assicurando compatibilità e prestazioni equivalenti agli originali. Disponiamo inoltre di un sistema di
+            consegna rapida per i nostri clienti principali.</p>
+
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="slide active">
+                <img src="img/ricambistica1.JPG" alt="Ricambio 1" />
+                <div class="caption">Testa per macchina foratrice da legno</div>
+              </div>
+              <div class="slide">
+                <img src="img/ricambistica2.JPG" alt="Ricambio 2" />
+                <div class="caption">Coperchio cambio estraibile team motogp</div>
+              </div>
+              <!-- Aggiungi altre immagini se le hai -->
+            </div>
+            <div class="carousel-controls">
+              <button class="prev">&#10094;</button>
+              <button class="next">&#10095;</button>
+            </div>
+          </div>
+        </div>
+
+    </div>
   </div>
 </div>
-</section>
-<br>
-<!-- Contatti  -->
-<section id="contatti">
-  <div class="contatti-container">
-    <div class="contatti-info">
-      <h2>Contattaci</h2>
-      <div class="contatto-riga">
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:info@meccanicaberluti.it">info@meccanicaberluti.it</a>
+
+      <!-- quarta sezione - PARCO MACCHINE-->
+      <div class="parco-macchine-tit" id="parco">
+        <h5>Il nostro parco macchine</h5>
       </div>
-      <div class="contatto-riga">
-        <i class="fas fa-phone"></i>
-        <a href="tel:+390712345678">+39 071 2345678</a>
-      </div>
-    </div>
-    <form class="contatti-form">
-      <input type="text" name="nome" placeholder="Il tuo nome" required />
-      <input type="email" name="email" placeholder="La tua email" required />
-      <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
-      <button type="submit">Invia</button>
-    </form>
-  </div>
-</section>
+      <section id="parco-macchine">
+       
+        <p>
+          Il nostro parco macchine è composto da numerosi centri di lavoro verticali, orizzontali, torni CNC e
+          macchinari tradizionali.
+          Disponiamo di attrezzature moderne e diversificate che ci consentono di realizzare lavorazioni complesse con
+          precisione e flessibilità.
+        </p>
+
+        <h3>🔧 Centri di lavoro e torni CNC</h3>
+        <ul>
+          <li>Centro di tornitura PUMA 2600 SY-2</li>
+          <li>Centro di lavoro verticale alta velocità DOOSAN DNM 5700 (2022)</li>
+          <li>n°2 Centri di lavoro verticale alta velocità DOOSAN DNM 4500 (2017)</li>
+          <li>Centro di lavoro orizzontale pallet 400 Kitamura HX400i (2009)</li>
+          <li>n°2 Centri di lavoro orizzontale Doosan HC500 pallet 500 (2014–2016)</li>
+          <li>n°2 Centri di lavoro AERRE CL 70200 (corse 2000×700×750) (2000–2016)</li>
+          <li>n°4 Centri di lavoro AERRE CL 55150 (corse 1500×600×600)</li>
+          <li>n°7 Centri di lavoro verticali AERRE CL 4080 (corse 800×400×500)</li>
+          <li>Centro di lavoro montante mobile FAGIMA FAST 160 (corse 1600×700×700), con 4° asse D.300</li>
+          <li>Centro di lavoro montante mobile FAGIMA FAST 200 (corse 2000×700×500), tavola indexata</li>
+          <li>Centro di lavoro montante mobile FAGIMA SPIN ARROW 320 (corse 3200×800×800), tavola basculante con 5 assi
+            controllati</li>
+          <li>Fresatrice OMV BPF-3 con testa asse B in continuo e tavola Nikken (corse 1500×700×700)</li>
+          <li>Centro di tornitura AVM Angelini DG13 (300×800) con braccetto di scarico</li>
+          <li>Tornio visualizzato da 1500 mm Tovaglieri</li>
+        </ul>
+
+        <h3>🛠️ Altre macchine e attrezzature</h3>
+        <ul>
+          <li>Lapidello ALPA 1000×300</li>
+          <li>Troncatrice ad alta velocità per alluminio</li>
+          <li>Sega a nastro MEP</li>
+          <li>Sega Kasto a CN, larghezza taglio 300 mm (2009)</li>
+          <li>Vari trapani a colonna</li>
+          <li>Piccolo reparto saldatura a filo e castolin</li>
+        </ul>
+
+        <h3>📏 Controllo qualità e metrologia</h3>
+        <ul>
+          <li>Macchina di misura tridimensionale automatica COORD3</li>
+          <li>n°2 Altimetri Mitutoyo LH600 B</li>
+          <li>Rugosimetro Mitutoyo</li>
+          <li>Sala metrologica climatizzata</li>
+        </ul>
+
+        <h3>📐 Strumenti di presetting</h3>
+        <ul>
+          <li>Presetting Conti</li>
+          <li>Presetting ELBO controlli, motorizzato con proiettore di profili</li>
+          <li>Presetting Demm</li>
+        </ul>
+
+        <h3>🔍 Marcatura</h3>
+        <ul>
+          <li>Marcatore laser AUTOMATOR (area utile 110×110 mm)</li>
+        </ul>
+      </section>
+      <br>
 
 
-<!-- footer -->
-<footer>
-  <p><strong>Meccanica Berluti S.R.L.</strong></p>
-  <p>P.IVA 02524370422 – Capitale sociale € 100.000,00 i.v.</p>
-  <p>Iscritta al Registro Imprese di Ancona n. 02524370422</p>
-  <p>Iscritta al R.E.A. di Ancona n. 195095</p>
-  <p><i>&copy; 2025 Meccanica Berluti – Tutti i diritti riservati</i></p>
-</footer>
-<script src="script.js"></script>
+      <!-- DOVE SIAMO-->
+      <section id="sez-mappa">
+        <div class="mappa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23064.482694403916!2d13.17256550449205!3d43.73007341766521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132d7338df0d2fc1%3A0xde2d49f6cb0e6c12!2sMeccanica%20Berluti%20S.R.L.!5e0!3m2!1sit!2sit!4v1613116222872!5m2!1sit!2sit"
+            width="430" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+          <div class="mappa-text">
+            <h2>Dove siamo</h2>
+            <br>
+            <p>
+              Via A. Modigliani, 27
+              <br>
+              60019, Senigallia, AN
+            </p>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- CONTATTI  -->
+      <section id="sez-contatti">
+        <div class="contatti-container">
+          <div class="contatti-info">
+            <h2>Contattaci</h2>
+            <div class="contatto-riga">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@meccanicaberluti.it">info@meccanicaberluti.it</a>
+            </div>
+            <div class="contatto-riga">
+              <i class="fas fa-phone"></i>
+              <a href="tel:+390712345678">+39 071 2345678</a>
+            </div>
+          </div>
+          <form class="contatti-form">
+            <input type="text" name="nome" placeholder="Il tuo nome" required />
+            <input type="email" name="email" placeholder="La tua email" required />
+            <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
+            <button type="submit">Invia</button>
+          </form>
+        </div>
+      </section>
+
+      <button id="scrollTopBtn" title="Torna su">↑</button>
+
+
+
+
+
+      <!-- SCRIPT -->
+      <script src="script.js"></script>
+
 </body>
 
 </html>
