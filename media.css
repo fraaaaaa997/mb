@@ -226,6 +226,12 @@ button {
         margin-top: 6px !important;
         margin-right: -10px !important;
     }
+
+    .bottom-right h4{
+        
+        margin-top: 6px !important;
+        
+    }
     .hero {
         height: 46vh;
     }
@@ -244,6 +250,7 @@ button {
       .mappa-text h2 {
         font-size: 27px; /* Rimpicciolisce il testo */
         padding: 10px;
+        margin: 1px auto;
       }
 
       .sez-contatti {
