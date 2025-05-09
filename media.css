@@ -1,0 +1,221 @@
+/* Responsive */
+
+/* #988 ------------------------------------------------------------------------------------------------ */
+@media (max-width: 988px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 13vh;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.819);
+        transform: translateY(-100%);
+        transition: transform 0.6s ease-in-out;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        max-height: 87vh;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        background-color: rgba(0, 0, 0, 0.337);
+
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.561);
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dropdown-menu {
+        position: static;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
+/* -----------------------------------------------------------------------------------------------------*/
+/* #768 -  tablet ------------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 13vh;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.819);
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        max-height: 87vh;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dropdown-menu {
+
+        position: static;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.567);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .storia-cont {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .immagini {
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+    .immagini-2 {
+        flex-direction: column;
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+
+
+    .sez-cont-2 {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .sez-cont-2 ul {
+        padding-left: 16px;
+    }
+
+
+}
+
+/* -----------------------------------------------------------------------------------------------------*/
+/* 480 - telefono --------------------------------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+
+
+
+    .storia-text {
+        padding: 20px !important;
+        font-size: 16px;
+    }
+
+    .storia-text-2 {
+        padding: 20px !important;
+        font-size: 16px;
+
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 13vh;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.819);
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        max-height: 87vh;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+
+        width: 100%;
+        border: none;
+        box-shadow: none;
+    }
+
+    .dropdown-menu {
+
+        position: static;
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, 0.567);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+     
+    .sez-cont-2 {
+        padding: 15px;
+        font-size: 15px;
+    }
+
+    .sez-cont-2 li {
+        margin-bottom: 6px;
+    }
+}
