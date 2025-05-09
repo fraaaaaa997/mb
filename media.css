@@ -57,7 +57,7 @@
 /* #768 -  tablet ------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
     h1.slide-in-left {
-        font-size: 1.2rem;
+        font-size: 1rem;
         position: absolute;
         top: 10px;
         left: 10px;
@@ -74,16 +74,15 @@
       
     }
 
-  
+   
 
     footer {
         padding: 10px;
-        font-size: 12px;
+        font-size: 4px !important;
+        box-sizing: border-box;
+
       }
 
-      h5 {
-        padding-left: 9px;
-      }
   }
 
  
@@ -175,13 +174,24 @@
     .sez-cont-2 ul {
         padding-left: 16px;
     }
-
+    .logo img{
+        height: 70px;
+    }
 }
 
 /* -----------------------------------------------------------------------------------------------------*/
 /* 480 - telefono --------------------------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
+    
+    .logo{
+        height: 70px;
+    }
+    footer p {
+        
+        font-size: 12px !important;
+        box-sizing: border-box;
 
+      }
 
      
     .contatti-info {   
@@ -207,6 +217,7 @@
 
     .bottom-right{
         margin: 0;
+        margin-right: -10px !important;
     }
     .hero {
         height: 46vh;
@@ -366,6 +377,17 @@
     .sez-cont-2 li {
         margin-bottom: 6px;
     }
+    .hero-content h1 {
+        font-size: 18px !important;
+    }
+
+    .hero-content {
+        padding: 5px auto;
+    }
+    .slide-in-left {
+        padding: 5px auto;
+      }
+    
 }
 
 
