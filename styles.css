@@ -24,6 +24,8 @@ h5 {
   padding-left: 12vh;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
 
   font-weight: 300;
   font-size: 2em;
@@ -359,10 +361,11 @@ nav {
   border-top: 0.1px solid rgb(210, 0, 0);
   border-left: 0.1px solid rgb(210, 0, 0);
   background-color: rgba(0, 0, 0, 0.851);
-  width: 90%;
-  margin: 20px auto;
+  width: 95%;
+  margin: auto;
   font-size: 20px;
   font-weight: 300;
+  margin-bottom: 10vh;
   min-height: 100vh;
   padding: 40px;
   color: white;
@@ -470,6 +473,11 @@ nav {
   font-family: 'Segoe UI', sans-serif;
   color: white;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.921);
+}
+
+#riga {
+  height: 0.1px;
+  color: red;
 }
 
 .mappa {
@@ -768,8 +776,8 @@ footer.hidden {
   position: relative;
   color: #940000;
   font-size: 2rem;
-  font-weight: 300;
-  padding-bottom: 10px;
+  font-weight: 370;
+ padding-bottom: 10px;
 }
 
 .section h2::after {
@@ -810,7 +818,7 @@ footer.hidden {
 
 .riassunto {
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 350;
   color: #ccc;
 }
 
@@ -871,12 +879,13 @@ footer.hidden {
   border-bottom: 0.1px solid rgb(210, 0, 0);
   border-right: 0.1px solid rgb(210, 0, 0);
   background-color: rgba(0, 0, 0, 0.851);
-  width: 90%;
-  margin: auto;
+  width: 95%;
+  margin:  auto;
+
   font-size: 1.2em;
   font-weight: 300;
   height: auto;
-  padding: 6vh;
+  padding: 5vh;
   color: white;
   gap: 10px;
   display: flex;
@@ -1014,3 +1023,54 @@ footer.hidden {
 #Brunitura li {
   text-decoration: underline; /* Sottolinea il testo */
 }
+
+.mobile-only {
+  display: none;
+}
+/* --------------------------------------------------------------------------------------------------- */
+/* CAROSELLO MOBILE----------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: flex;
+  }
+
+  .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .mobile-only {
+    margin-top: 6vh;
+    margin-bottom: -3vh !important;
+    width: 95%;
+    float: none;
+    box-shadow:
+    0 0 10px black,
+    0 0 30px rgba(255, 255, 255, 0.594),
+    0 0 45px rgba(0, 0, 0, 0.336),
+    0 0 35px rgba(255, 255, 255, 0.594),
+
+
+      0 0 90px black,
+      0 0 150px black;
+;
+      
+   
+  }
+
+  #mobile-carousel {
+    box-shadow:
+      0 0 30px black,
+      0 0 60px black,
+      0 0 90px black,
+      0 0 120px black;
+  }
+  
+
+  #no-tab-car {
+  display: none;
+  }
+}
+
+  
