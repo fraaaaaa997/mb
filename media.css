@@ -2,6 +2,10 @@
 
 /* #988 ------------------------------------------------------------------------------------------------ */
 @media (max-width: 988px) {
+
+    .logo img {
+        height: 70px;
+    }
     .hamburger {
         display: flex;
     }
@@ -62,35 +66,35 @@
         top: 10px;
         left: 10px;
         margin: 0;
-      }
+    }
 
 
     .bottom-right h4 {
-      font-size: 1rem;
-    }
-  
-    .bottom-right p {
-      font-size: 0.9rem;
-      
+        font-size: 1rem;
     }
 
-   
+    .bottom-right p {
+        font-size: 0.9rem;
+
+    }
+
+
 
     footer {
         padding: 10px;
         font-size: 4px !important;
         box-sizing: border-box;
 
-      }
+    }
 
-  }
+}
 
- 
 
-  
-  
+
+
+
 @media (max-width: 768px) {
-   
+
     .hero-content h1 {
         font-size: 26px;
         padding: 12px 24px;
@@ -147,7 +151,7 @@
 
     .storia-cont {
         font-size: 0.9em;
-        padding: 10px;
+        padding: 0px;
     }
 
     .immagini {
@@ -155,7 +159,7 @@
         width: 100%;
         justify-content: center;
         align-items: center;
-        margin: 3px auto;
+        margin: auto;
     }
 
     .immagini-2 {
@@ -163,7 +167,7 @@
         width: 100%;
         justify-content: center;
         align-items: center;
-        margin: 10px auto;
+        margin: auto;
     }
 
 
@@ -175,98 +179,125 @@
     .sez-cont-2 ul {
         padding-left: 16px;
     }
-    .logo img{
+
+    .logo img {
         height: 70px;
+    }
+
+    #parco-macchine {
+        width: 95%;
+        padding: 20px auto;
     }
 }
 
 /* -----------------------------------------------------------------------------------------------------*/
 /* 480 - telefono --------------------------------------------------------------------------------------*/
 @media screen and (max-width: 480px) {
-    
-    .logo{
+
+    .logo {
         height: 70px;
     }
+
     footer p {
-        
+
         font-size: 12px !important;
         box-sizing: border-box;
 
-      }
- 
+    }
 
-     
-    .contatti-info {   
+
+
+    .contatti-info {
         text-align: center;
         justify-content: center;
         align-items: center;
         gap: 5px !important;
-       
-    }
-    .contatti-info h2 {
-        font-size: 27px;
-      
+
     }
 
-    .contatto-riga {   
+    .contatti-info h2 {
+        font-size: 27px;
+
+    }
+
+    .contatto-riga {
         font-size: 15px !important;
 
     }
 
     #sez-contatti {
-        padding: 10px !important;
-        margin: 5px auto !important;
+        width: 95%;
+        padding: 12px !important;
+        margin: auto !important;
+        padding-top: 21px !important; 
         margin-bottom: 25vh !important;
-        
+
     }
 
-    .bottom-right{
+    .bottom-right {
         margin: 0;
         margin-top: 6px !important;
         margin-right: -30px !important;
-       
+
     }
 
-    .bottom-right h4{
-        
+    .bottom-right h4 {
+
         margin-top: 6px !important;
-        
+
     }
+
     .hero {
         height: 47vh;
     }
+
     .mappa-text {
         margin-top: 20px;
         margin-bottom: 0px;
         min-height: 20vh;
-    
+
     }
+
     .mappa-text p {
-        font-size: 16px; /* Rimpicciolisce il testo */
+        font-size: 16px;
+        /* Rimpicciolisce il testo */
         margin-top: -20px !important;
         padding: 10px;
-      }
+    }
 
-      .mappa-text h2 {
-        font-size: 27px; /* Rimpicciolisce il testo */
+    .mappa-text h2 {
+        font-size: 27px;
+        /* Rimpicciolisce il testo */
         padding: 10px;
         margin: 1px auto;
         margin-top: -5px !important;
-      }
-
-      .sez-contatti {
-        font-size: 14px;
-        padding: 20px auto;
-      }
-
-    #sez-mappa {
-        padding: 10px;
-
-        
     }
 
+    .sez-contatti {
+        font-size: 14px;
+        padding: 20px auto;
+    }
+
+    #sez-mappa {
+        padding: 0px;
+width: 95%;
+
+}
+
+.mappa-text p {
+line-height: 1.5;
+}
+    
+.contatti-form button {
+    align-items: center !important;
+    justify-content: center !important;
+    width: 66%;
+    margin: auto;
+    padding: 9px;
+}
+
+
     h5 {
-        margin-top: 1vh;
         padding-left: 0px;
         text-align: center;
     }
@@ -283,12 +314,15 @@
         font-size: 20px;
         text-align: center;
     }
+
     #personalizza {
         font-size: 20px;
     }
+
     #prototipiid {
         font-size: 20px;
     }
+
     #ricambisticaid {
         font-size: 20px;
     }
@@ -299,39 +333,41 @@
         gap: 10px;
         width: 90%;
         box-shadow: none;
-      }
-    
-      .immagini img {
+    }
+
+    .immagini img {
         width: 80%;
         height: auto;
         max-width: 100%;
-      }
+    }
 
-      .immagini-2 {
+    .immagini-2 {
         flex-direction: column;
         padding: 5px;
         gap: 10px;
         width: 90%;
         box-shadow: none;
-      }
-    
-      .immagini-2 img {
+    }
+
+    .immagini-2 img {
         width: 80%;
         height: auto;
         max-width: 100%;
-      }
+    }
 
     .sez-cont-1 {
         flex-direction: column;
         padding: 0;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
         gap: 15px;
         width: 95%;
-      }
-   p {
-    font-size: 16px;
-   }
+    }
+
+    p {
+        font-size: 16px;
+    }
+
     .storia-text {
         padding: 20px !important;
         font-size: 15px;
@@ -340,6 +376,12 @@
     .storia-text-2 {
         padding: 20px !important;
         font-size: 15px;
+
+    }
+
+    .mappa {
+        padding: 15px;
+        gap: 0px;
 
     }
 
@@ -391,7 +433,7 @@
     .dropdown:hover .dropdown-menu {
         display: block;
     }
-     
+
     .sez-cont-2 {
         padding: 15px;
         font-size: 15px;
@@ -400,6 +442,7 @@
     .sez-cont-2 li {
         margin-bottom: 6px;
     }
+
     .hero-content h1 {
         font-size: 18px !important;
     }
@@ -407,13 +450,14 @@
     .hero-content {
         padding: 5px auto;
     }
+
     .slide-in-left {
         padding: 5px auto;
-      }
-    
+    }
+
 }
 
 
 h1.slide-in-left {
     font-size: clamp(1.5rem, 5vw, 3rem);
-  }
+}
