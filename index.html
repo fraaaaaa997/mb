@@ -203,7 +203,7 @@
             processo, in 24/48 ore.
           </p>
           <!-- carosello -->
-          <div class="carousel-container">
+          <div class="carousel-container " id="no-tab-car">
             <div class="carousel">
               <div class="slide active">
                 <img src="img/particolari/1.JPG" alt="Particolare 1" />
@@ -246,7 +246,7 @@
             trattamenti di superficie per adattarci perfettamente alle necessità tecniche e funzionali di ogni cliente.
           </p>
 
-          <div class="carousel-container">
+          <div class="carousel-container" id="no-tab-car">
             <div class="carousel">
               <div class="slide active">
                 <img src="img/personalizzazioni/1.jpg" alt="Personalizzazione 1" />
@@ -305,7 +305,7 @@
             assicurando compatibilità e prestazioni equivalenti agli originali. Disponiamo inoltre di un sistema di
             consegna rapida per i nostri clienti principali.</p>
 
-          <div class="carousel-container">
+          <div class="carousel-container" id="no-tab-car">
             <div class="carousel">
               <div class="slide active">
                 <img src="img/ricambistica1.JPG" alt="Ricambio 1" />
@@ -327,6 +327,79 @@
     </div>
   </div>
 </div>
+
+<!-- CAROSELLO MOBILE -->
+<div class="carousel-container mobile-only" >
+  <div class="carousel" id="mobile-carousel">
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <img src="img/particolari/1.JPG" alt="Particolare 1">
+      <div class="caption">Particolare meccanico a disegno</div>
+    </div>
+    <div class="slide">
+      <img src="img/particolari/2.JPG" alt="Particolare 2">
+      <div class="caption">Particolare meccanico a disegno</div>
+    </div>
+    <div class="slide">
+      <img src="img/particolari/03122008505.jpg" alt="Particolare 3">
+      <div class="caption">Premontaggio di particolari a disegno</div>
+    </div>
+    <div class="slide">
+      <img src="img/particolari/4.JPG" alt="Particolare 4">
+      <div class="caption">Particolare a disegno</div>
+    </div>
+    <div class="slide">
+      <img src="img/particolari/5.JPG" alt="Particolare 5">
+      <div class="caption">Premontaggio di particolari a disegno</div>
+    </div>
+    <div class="slide">
+      <img src="img/particolari/6.JPG" alt="Particolare 6">
+      <div class="caption">Particolare saldato e assemblato di medie dimensioni</div>
+    </div>
+
+    <!-- Slide 2: Personalizzazioni -->
+    <div class="slide">
+      <img src="img/personalizzazioni/1.jpg" alt="Personalizzazione 1">
+      <div class="caption">Bocchettone "scarico rapido" serbatoio Ducati AMA Superbike</div>
+    </div>
+    <div class="slide">
+      <img src="img/personalizzazioni/2.jpg" alt="Personalizzazione 2">
+      <div class="caption">Piastra attacco forcelle a disegno</div>
+    </div>
+    <div class="slide">
+      <img src="img/personalizzazioni/3.jpg" alt="Personalizzazione 3">
+      <div class="caption">Tappo serbatoio "racing"</div>
+    </div>
+    <div class="slide">
+      <img src="img/personalizzazioni/4.jpg" alt="Personalizzazione 4">
+      <div class="caption">Raiser personalizzati a disegno</div>
+    </div>
+    <div class="slide">
+      <img src="img/personalizzazioni/5.jpg" alt="Personalizzazione 5">
+      <div class="caption">Coperchio pompa frizione personalizzato</div>
+    </div>
+    <div class="slide">
+      <img src="img/personalizzazioni/6.jpg" alt="Personalizzazione 6">
+      <div class="caption">Innesto tubo pompa freno posteriore modificato</div>
+    </div>
+
+    <!-- Slide 3: Ricambistica -->
+    <div class="slide">
+      <img src="img/ricambistica1.JPG" alt="Ricambio 1">
+      <div class="caption">Testa per macchina foratrice da legno</div>
+    </div>
+    <div class="slide">
+      <img src="img/ricambistica2.JPG" alt="Ricambio 2">
+      <div class="caption">Coperchio cambio estraibile team motogp</div>
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </div>
+</div>
+
 
       <!-- quarta sezione - PARCO MACCHINE-->
       <div class="parco-macchine-tit" id="parco">
@@ -393,6 +466,7 @@
       <br>
 
 
+
       <!-- DOVE SIAMO-->
       <section id="sez-mappa">
         <div class="mappa">
@@ -409,13 +483,13 @@
               <br>
               60019, Senigallia, AN
             </p>
-            
+
           </div>
         </div>
       </section>
 
 
-      <!-- CONTATTI  -->
+      <!-- I  -->
       <section id="sez-contatti">
         <div class="contatti-container">
           <div class="contatti-info">
@@ -437,7 +511,7 @@
           </form>
         </div>
       </section>
-
+   
       <button id="scrollTopBtn" title="Torna su">↑</button>
 
 
