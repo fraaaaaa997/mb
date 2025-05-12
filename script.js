@@ -149,3 +149,16 @@ const h5Observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('h5').forEach(h5 => {
   h5Observer.observe(h5);
 });
+
+
+// PARCO MACCHINE
+
+
+
+  document.querySelectorAll(".accordion-header").forEach(header => {
+    header.addEventListener("click", () => {
+      const body = header.nextElementSibling;
+      body.classList.toggle("open");
+      header.classList.toggle("active");
+    });
+  });
