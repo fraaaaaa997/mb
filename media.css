@@ -154,6 +154,10 @@
         padding: 0px;
     }
 
+    .storia-cont p {
+        margin: 15px auto;
+    }
+
     .immagini {
         flex-direction: column;
         width: 100%;
@@ -298,8 +302,11 @@ line-height: 1.5;
 
 
     h5 {
+        font-size: 24px;
+        font-weight: 400;
         padding-left: 0px;
         text-align: center;
+     
     }
 
     .carousel-container {
@@ -469,9 +476,131 @@ line-height: 1.5;
       .accordion-header.active::after {
         width: 100%;
       }
-
+ 
 }
 
+/* --------------------------------------------------------------------------------------------------- */
+/* CAROSELLO MOBILE----------------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+   
+    #parco-macchine {
+        padding: 15px;
+    }
+
+    #parco-macchine p {
+        font-weight: 300;
+        font-size: 1em;
+        line-height: 1.6;
+        margin-bottom: 30px;
+        text-align:center;
+      }
+
+
+
+    .mobile-only {
+      display: flex;
+    }
+  
+    .carousel-wrapper {
+      display: flex;
+      justify-content: center;
+      
+    }
+  
+    .mobile-only {
+      margin-top: 6vh;
+      margin-bottom: -3vh !important;
+      width: 95%;
+      float: none;
+      box-shadow:
+      0 0 10px black,
+      0 0 30px rgba(255, 255, 255, 0.594),
+      0 0 45px rgba(0, 0, 0, 0.336),
+      0 0 35px rgba(255, 255, 255, 0.594),
+  
+  
+        0 0 90px black,
+        0 0 150px black;
+  
+        
+     
+    }
+  
+    #mobile-carousel {
+      box-shadow:
+        0 0 30px black,
+        0 0 60px black,
+        0 0 90px black,
+        0 0 120px black;
+    }
+    
+  }
+  
+  .accordion-header {
+    background-color: transparent;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .accordion-header .arrow {
+    transition: transform 0.3s ease;
+    font-size: 0.8em;
+    color: rgb(194, 1, 1);
+  
+  }
+  
+  .accordion-header.active .arrow {
+    transform: rotate(180deg);
+    color: white
+  }
+  
+  .accordion-body {
+    display: none;
+    margin: 10px 0 20px 0;
+    padding-left: 15px;
+  }
+  
+  .accordion-body.open {
+    display: block;
+  }
+  
+  
+  .accordion-header {
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+  
+  
+  .accordion-header:hover::after {
+    width:50%; /* si espande leggermente al passaggio del mouse */
+  }
+  
+  
+  .accordion-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 0.5px;
+    background-color: red;
+    width: 93%;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  .accordion-header.active::after {
+    width: 100%;
+  }
+  
 
 h1.slide-in-left {
     font-size: clamp(1.5rem, 5vw, 3rem);
