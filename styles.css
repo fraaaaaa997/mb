@@ -936,7 +936,7 @@ footer.hidden {
   background-repeat: no-repeat;
   background-position: center;
   border: 3px solid black;
-  
+
   display: flex;
   justify-content: end;
   align-items: end;
