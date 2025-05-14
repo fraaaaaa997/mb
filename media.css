@@ -6,6 +6,7 @@
     .logo img {
         height: 70px;
     }
+
     .hamburger {
         display: flex;
     }
@@ -196,7 +197,7 @@
 
 /* -----------------------------------------------------------------------------------------------------*/
 /* 480 - telefono --------------------------------------------------------------------------------------*/
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 550px) {
 
     .logo {
         height: 70px;
@@ -233,8 +234,9 @@
         width: 95%;
         padding: 12px !important;
         margin: auto !important;
-        padding-top: 21px !important; 
-        margin-bottom: 25vh !important;
+        padding-top: 21px !important;
+        padding-bottom: 21px !important;
+        margin-bottom: 26vh !important;
 
     }
 
@@ -284,21 +286,21 @@
 
     #sez-mappa {
         padding: 0px;
-width: 95%;
+        width: 95%;
 
-}
+    }
 
-.mappa-text p {
-line-height: 1.5;
-}
-    
-.contatti-form button {
-    align-items: center !important;
-    justify-content: center !important;
-    width: 66%;
-    margin: auto;
-    padding: 9px;
-}
+    .mappa-text p {
+        line-height: 1.5;
+    }
+
+    .contatti-form button {
+        align-items: center !important;
+        justify-content: center !important;
+        width: 66%;
+        margin: auto;
+        padding: 9px;
+    }
 
 
     h5 {
@@ -306,7 +308,8 @@ line-height: 1.5;
         font-weight: 400;
         padding-left: 0px;
         text-align: center;
-     
+        margin-bottom: 3vh;
+
     }
 
     .carousel-container {
@@ -471,20 +474,23 @@ line-height: 1.5;
         background-color: red;
         width: 90%;
         transition: width 0.4s ease-in-out;
-      }
-      
-      .accordion-header.active::after {
+    }
+
+    .accordion-header.active::after {
         width: 100%;
-      }
- 
+    }
+
 }
 
 /* --------------------------------------------------------------------------------------------------- */
 /* CAROSELLO MOBILE----------------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
-   
+
     #parco-macchine {
         padding: 15px;
+        padding-top: 5vh;
+        padding-bottom: 6vh;
+
     }
 
     #parco-macchine p {
@@ -492,51 +498,60 @@ line-height: 1.5;
         font-size: 1em;
         line-height: 1.6;
         margin-bottom: 30px;
-        text-align:center;
-      }
+        text-align: center;
+    }
 
 
 
     .mobile-only {
-      display: flex;
+        display: flex;
+
     }
-  
+
     .carousel-wrapper {
-      display: flex;
-      justify-content: center;
-      
+        display: flex;
+        justify-content: center;
+
     }
+
+    .mobile-sfondo {
+        margin-top: 1px;
+        padding-top: 27vh;
+        padding-bottom: 27vh;
+        background-color: rgba(0, 0, 0, 0.863);
+    }
+
+    #parco-spazio {
+        /* border-top: 30vh solid rgba(0, 0, 0, 0.566); */
+        margin-top: -4.8vh !important;
   
+
+    }
+
     .mobile-only {
-      margin-top: 6vh;
-      margin-bottom: -3vh !important;
-      width: 95%;
-      float: none;
-      box-shadow:
-      0 0 10px black,
-      0 0 30px rgba(255, 255, 255, 0.594),
-      0 0 45px rgba(0, 0, 0, 0.336),
-      0 0 35px rgba(255, 255, 255, 0.594),
-  
-  
-        0 0 90px black,
-        0 0 150px black;
-  
-        
-     
+
+
+        width: 100%;
+        float: none;
+        box-shadow:
+            0 0 10px black,
+            0 0 15px rgba(255, 255, 255, 0.594),
+            0 0 45px rgba(0, 0, 0, 0.336),
+
+            0 0 30px rgba(0, 0, 0, 0.336);
     }
-  
+
     #mobile-carousel {
-      box-shadow:
-        0 0 30px black,
-        0 0 60px black,
-        0 0 90px black,
-        0 0 120px black;
+        box-shadow:
+            0 0 30px black,
+            0 0 60px black,
+            0 0 90px black,
+            0 0 120px black;
     }
-    
-  }
-  
-  .accordion-header {
+
+}
+
+.accordion-header {
     background-color: transparent;
     color: white;
     font-size: 1em;
@@ -549,44 +564,45 @@ line-height: 1.5;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .accordion-header .arrow {
+}
+
+.accordion-header .arrow {
     transition: transform 0.3s ease;
     font-size: 0.8em;
     color: rgb(194, 1, 1);
-  
-  }
-  
-  .accordion-header.active .arrow {
+
+}
+
+.accordion-header.active .arrow {
     transform: rotate(180deg);
     color: white
-  }
-  
-  .accordion-body {
+}
+
+.accordion-body {
     display: none;
     margin: 10px 0 20px 0;
     padding-left: 15px;
-  }
-  
-  .accordion-body.open {
+}
+
+.accordion-body.open {
     display: block;
-  }
-  
-  
-  .accordion-header {
+}
+
+
+.accordion-header {
     position: relative;
     padding-bottom: 10px;
     font-weight: 400;
-  }
-  
-  
-  .accordion-header:hover::after {
-    width:50%; /* si espande leggermente al passaggio del mouse */
-  }
-  
-  
-  .accordion-header::after {
+}
+
+
+.accordion-header:hover::after {
+    width: 50%;
+    /* si espande leggermente al passaggio del mouse */
+}
+
+
+.accordion-header::after {
     content: "";
     position: absolute;
     left: 0;
@@ -595,16 +611,13 @@ line-height: 1.5;
     background-color: red;
     width: 93%;
     transition: width 0.4s ease-in-out;
-  }
-  
-  .accordion-header.active::after {
+}
+
+.accordion-header.active::after {
     width: 100%;
-  }
-  
+}
+
 
 h1.slide-in-left {
     font-size: clamp(1.5rem, 5vw, 3rem);
 }
-
-
-
