@@ -3,6 +3,15 @@
 /* #988 ------------------------------------------------------------------------------------------------ */
 @media (max-width: 988px) {
 
+    #logo-mecc {
+        height: 350px;
+        width: 400px;
+    }
+
+    .hero {
+        height: 61vh;
+
+    }
     .logo img {
         height: 70px;
     }
@@ -64,7 +73,7 @@
     h1.slide-in-left {
         font-size: 1rem;
         position: absolute;
-        top: 10px;
+        top: 10px; 
         left: 10px;
         margin: 0;
     }
@@ -96,6 +105,11 @@
 
 @media (max-width: 768px) {
 
+
+    #logo-mecc {
+        height: 350px;
+        width: 400px;
+    }
     .hero-content h1 {
         font-size: 26px;
         padding: 12px 24px;
@@ -227,7 +241,11 @@
         font-size: 27px;
 
     }
+    .hero {
+        height: 61vh;
+        padding: 10px;
 
+    }
     .contatto-riga {
         font-size: 15px !important;
 
@@ -462,10 +480,12 @@
         padding: 5px auto;
     }
 
-    .slide-in-left {
-        padding: 5px auto;
-    }
+    #logo-mecc {    
+         height: 230px;
+         width: 310px;
 
+    }
+    
     .accordion-header::after {
         content: "";
         position: absolute;
@@ -520,15 +540,10 @@
         margin-top: 1px;
         padding-top: 27vh;
         padding-bottom: 27vh;
-        background-color: rgba(0, 0, 0, 0.863);
+        background-color: rgb(0, 0, 0);
     }
 
-    #parco-spazio {
-        /* border-top: 30vh solid rgba(0, 0, 0, 0.566); */
-        margin-top: -4.8vh !important;
-  
 
-    }
 
     .mobile-only {
 
