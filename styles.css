@@ -406,10 +406,15 @@ nav {
   border-right: 0.1px solid rgb(210, 0, 0);
   width: 98%;
   margin: 20px auto;
+  margin-bottom: 30px;
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.851);
   color: white;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.921);
+}
+
+.accordion {
+  margin-bottom: 3vh;
 }
 
 #parco-macchine h2 {
@@ -879,13 +884,13 @@ footer.hidden {
   background-color: rgba(0, 0, 0, 0.851);
   width: 95%;
   margin:  auto;
-
+  flex-direction: column;
   font-size: 1.2em;
   font-weight: 300;
   height: auto;
   padding: 5vh;
   color: white;
-  gap: 10px;
+  gap: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1023,5 +1028,9 @@ footer.hidden {
 }
 
 .mobile-only {
+  display: none;
+}
+
+.mobile-sfondo {
   display: none;
 }
