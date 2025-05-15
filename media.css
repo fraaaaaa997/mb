@@ -104,6 +104,9 @@
     .hamburger {
         display: flex;
     }
+    .carousel-container {
+        display: none;
+    }
 
     .nav-links {
         position: absolute;
@@ -312,9 +315,7 @@
 
     }
 
-    .carousel-container {
-        display: none;
-    }
+  
 
     .sez-cont-2 {
         margin-bottom: 10vh;
@@ -515,6 +516,7 @@
     }
 
     .mobile-sfondo {
+        display: flex;
         margin-top: 1px;
         padding-top: 27vh;
         padding-bottom: 27vh;
