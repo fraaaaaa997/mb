@@ -461,4 +461,9 @@
         width: 100%;
     }
 
+      body {
+        background-image: url("img/sfondo-ogg2.png");
+    }
+
+
 }
