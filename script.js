@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const scrollContent = document.getElementById("scroll-content");
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
 
   let isAtBottom = false;
 
@@ -52,20 +53,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // --- Scroll orizzontale ---
+    // --- Scroll orizzontale nella sezione (metodo che funziona) ---
     if (scrollWrapper && scrollContent) {
-      const wrapperTop = scrollWrapper.offsetTop;
-      const relativeScroll = scrollY - wrapperTop;
+      const sectionTop = scrollWrapper.offsetTop;
+      const scrollY = window.scrollY;
+      const relativeScroll = scrollY - sectionTop;
       const maxScroll = scrollWrapper.offsetHeight - window.innerHeight;
 
-      if (scrollY >= wrapperTop && scrollY < wrapperTop + maxScroll) {
+      if (scrollY >= sectionTop && scrollY < sectionTop + maxScroll) {
         const percentage = relativeScroll / maxScroll;
         const scrollX = percentage * (scrollContent.scrollWidth - window.innerWidth);
         scrollContent.style.transform = `translateX(-${scrollX}px)`;
+      } else if (scrollY < sectionTop) {
+        scrollContent.style.transform = `translateX(0)`;
+      } else {
+        scrollContent.style.transform = `translateX(-${scrollContent.scrollWidth - window.innerWidth}px)`;
+      }
+    }
+
+    // --- Pulsante scroll to top visibilità ---
+    if (scrollTopBtn) {
+      if (scrollY > window.innerHeight) {
+        scrollTopBtn.classList.add("show");
+      } else {
+        scrollTopBtn.classList.remove("show");
       }
     }
   }
-
 
   // --- Menu mobile toggle ---
   if (hamburger && navLinks) {
@@ -109,69 +123,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCarousel();
   });
-});
 
-
-// PULSNTE PER TORNARE IN CIMA
-  const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > window.innerHeight) {
-      scrollTopBtn.classList.add("show");
-    } else {
-      scrollTopBtn.classList.remove("show");
-    }
-  });
-
-  scrollTopBtn.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+  // --- Pulsante scroll to top click ---
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     });
+  }
+
+  // --- Intersection Observer per animazioni in entrata delle sezioni ---
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible"); // opzionale: per far sparire quando esce
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  document.querySelectorAll(".section").forEach((section) => {
+    observer.observe(section);
   });
 
+  // --- Intersection Observer per h5 ---
+  const h5Observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
 
-// EFFETTO
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    } else {
-      entry.target.classList.remove('visible'); // opzionale: per farla sparire quando esce
-    }
+  document.querySelectorAll("h5").forEach((h5) => {
+    h5Observer.observe(h5);
   });
-}, { threshold: 0.5 });
 
-document.querySelectorAll('.section').forEach(section => {
-  observer.observe(section);
-});
-
-
-// H5
-
-const h5Observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      // Aggiungi la classe 'visible' quando l'elemento entra nella viewport
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.5 }); // Attiviamo quando il 50% dell'elemento è visibile
-
-// Selezioniamo tutti gli h5 e li osserviamo
-document.querySelectorAll('h5').forEach(h5 => {
-  h5Observer.observe(h5);
-});
-
-
-// PARCO MACCHINE
-
-
-
-  document.querySelectorAll(".accordion-header").forEach(header => {
+  // --- Accordion per parco macchine ---
+  document.querySelectorAll(".accordion-header").forEach((header) => {
     header.addEventListener("click", () => {
       const body = header.nextElementSibling;
       body.classList.toggle("open");
       header.classList.toggle("active");
     });
   });
+});
