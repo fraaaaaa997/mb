@@ -11,10 +11,7 @@ html {
 
 body {
   background-color: black;
-  background-image:
-  url(img/MacBook\ Pro\ 16_\ -\ 1.png);
-  
-
+  background-image: url(img/sfondo-ogg.png);
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -405,12 +402,6 @@ nav {
 
 /* ---------------------------------------------------------------------------------------------------- */
 /* parco macchine ------------------------------------------------------------------------------------- */
-
-.parco-macchine-tit {
-  margin-top: 5vh !important;
-
-
-}
 
 #parco-macchine {
   border-bottom: 0.1px solid rgb(210, 0, 0);
