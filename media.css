@@ -171,21 +171,6 @@
         display: none;
     }
 
-    .nav-links {
-        position: absolute;
-        top: 13vh;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.819);
-        transform: translateY(-100%);
-        transition: transform 0.4s ease-in-out;
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none;
-        max-height: 87vh;
-        overflow-y: auto;
-    }
 
 
     .storia-cont {
@@ -431,23 +416,6 @@
         padding: 15px;
         gap: 0px;
 
-    }
-
-
-    .nav-links {
-        position: absolute;
-        top: 13vh;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.819);
-        transform: translateY(-100%);
-        transition: transform 0.4s ease-in-out;
-        z-index: 1000;
-        opacity: 0;
-        pointer-events: none;
-        max-height: 87vh;
-        overflow-y: auto;
     }
 
 
