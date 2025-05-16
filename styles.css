@@ -728,7 +728,7 @@ footer.hidden {
 /* Sezione di scroll verticale ------------------------------------------------------------------------ */
 .sticky-wrapper {
   position: relative;
-  height: calc(100vh * 4);
+  height: calc(100vw * 4);
   /* numero di sezioni orizzontali */
 }
 
@@ -737,8 +737,11 @@ footer.hidden {
   top: 0;
   height: 100vh;
   width: 100vw;
+  box-sizing: border-box;
   overflow: hidden;
 }
+
+
 
 .scroll-content {
   display: flex;
@@ -749,6 +752,7 @@ footer.hidden {
   transform: translate3d(0, 0, 0);
   transition: transform 0.05s linear; /* opzionale */
   will-change: transform;
+  box-sizing: border-box;
 
 }
 
@@ -766,7 +770,8 @@ footer.hidden {
   gap: 25px;
   border-right: 0.1px solid red;
   border-top: 0.1px solid red;
-  scroll-margin-top: 10vh;
+  scroll-margin-top: 130vh;
+  box-sizing: border-box;
   /* <-- questo è l'offset */
 
 
@@ -1110,4 +1115,3 @@ footer.hidden {
 
 
 
- 
