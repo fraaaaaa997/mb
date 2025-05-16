@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+
 }
 
 
@@ -373,7 +374,7 @@ nav {
   margin: auto;
   font-size: 20px;
   font-weight: 300;
-  margin-bottom: 10vh;
+  margin-bottom: 40vh;
   min-height: 100vh;
   padding: 40px;
   color: white;
@@ -728,7 +729,7 @@ footer.hidden {
 /* Sezione di scroll verticale ------------------------------------------------------------------------ */
 .sticky-wrapper {
   position: relative;
-  height: calc(100vw * 4);
+  height: calc(100vh * 4);
   /* numero di sezioni orizzontali */
 }
 
@@ -737,7 +738,6 @@ footer.hidden {
   top: 0;
   height: 100vh;
   width: 100vw;
-  box-sizing: border-box;
   overflow: hidden;
 }
 
@@ -745,14 +745,13 @@ footer.hidden {
 
 .scroll-content {
   display: flex;
-  width: 400vw;
-  height: 100%;
+  height: 100vh;   /* fissa all’altezza della viewport */
+  width: 400vw; 
   transition: transform 0.1s ease-out;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   transition: transform 0.05s linear; /* opzionale */
   will-change: transform;
-  box-sizing: border-box;
 
 }
 
@@ -771,7 +770,6 @@ footer.hidden {
   border-right: 0.1px solid red;
   border-top: 0.1px solid red;
   scroll-margin-top: 130vh;
-  box-sizing: border-box;
   /* <-- questo è l'offset */
 
 
