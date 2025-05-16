@@ -92,8 +92,6 @@
     }
 
     .mobile-only {
-
-
         width: 100%;
         float: none;
         box-shadow:
@@ -152,7 +150,7 @@
         padding: 10px 3px;
         box-sizing: border-box;
         color: white !important;
-        width: 99%;
+
 
     }
 
