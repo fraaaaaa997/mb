@@ -1050,4 +1050,73 @@ footer.hidden {
   display: none;
 }
 
- 
+/* ACCORDION */
+.accordion-header {
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 10px 0;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header .arrow {
+  transition: transform 0.3s ease;
+  font-size: 0.8em;
+  color: rgb(194, 1, 1);
+
+}
+
+.accordion-header.active .arrow {
+  transform: rotate(180deg);
+  color: white
+}
+
+.accordion-body {
+  display: none;
+  margin: 10px 0 20px 0;
+  padding-left: 15px;
+}
+
+.accordion-body.open {
+  display: block;
+}
+
+
+.accordion-header {
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+
+.accordion-header:hover::after {
+  width: 50%;
+  /* si espande leggermente al passaggio del mouse */
+}
+
+
+.accordion-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0.5px;
+  background-color: red;
+  width: 93%;
+  transition: width 0.4s ease-in-out;
+}
+
+.accordion-header.active::after {
+  width: 100%;
+}
+
+
+
+
