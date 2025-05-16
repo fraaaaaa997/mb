@@ -6,7 +6,6 @@
 
 html {
   scroll-behavior: smooth;
-  max-width: 100%;
 }
 
 
@@ -14,9 +13,7 @@ body {
   background-color: black;
   background-image:
   url(img/MacBook\ Pro\ 16_\ -\ 1.png);
-
-
-
+  
 
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -94,21 +91,9 @@ h5.visible {
   position: relative;
 }
 
-.hero-content h1 {
-  
-  margin: 0;
-  font-size: clamp(1.5rem, 5vw, 3rem);
-  /* background: linear-gradient(150deg, #ffffff91 30%, #ffffff0c, #ffffff48 70%); */
-  border-radius: 60px 30px;
-}
 
-#logo-mecc {
- position: relative;
-top: -7vh;
- left: -9vh;
-  height: 500px;
-  width: 600px;
-}
+
+
 
 #iso {
   font-size: 0.95em;
@@ -185,17 +170,6 @@ top: -7vh;
 }
 
 /* Animazioni ---------------------------------------------------------------------------------------- */
-@keyframes slideInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 
 @keyframes slideInRight {
   0% {
@@ -209,12 +183,30 @@ top: -7vh;
   }
 }
 
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .slide-in-left {
   opacity: 0;
   animation: slideInLeft 1s ease forwards;
 }
 
+#logo-mecc {
+  position: relative;
+top: -4vh;
+left: -8vh;
 
+  height: 500px;
+  width: 600px;
+}
 
 .slide-in-right {
   opacity: 0;
@@ -763,6 +755,11 @@ footer.hidden {
   width: 400vw;
   height: 100%;
   transition: transform 0.1s ease-out;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.05s linear; /* opzionale */
+  will-change: transform;
+
 }
 
 
@@ -1053,6 +1050,3 @@ footer.hidden {
   display: none;
 }
 
-.mobile-sfondo {
-  display: none;
-}
