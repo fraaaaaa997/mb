@@ -19,8 +19,20 @@ document.addEventListener("DOMContentLoaded", () => {
   setScrollWrapperHeight();
   window.addEventListener("resize", setScrollWrapperHeight);
 
-  // --- Gestione dello scroll ---
+  // --- Scroll fluido con requestAnimationFrame ---
+  let ticking = false;
+
   window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        handleScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  function handleScroll() {
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
     const bodyHeight = document.body.offsetHeight;
@@ -52,7 +64,8 @@ document.addEventListener("DOMContentLoaded", () => {
         scrollContent.style.transform = `translateX(-${scrollX}px)`;
       }
     }
-  });
+  }
+
 
   // --- Menu mobile toggle ---
   if (hamburger && navLinks) {
