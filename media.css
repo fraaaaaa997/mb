@@ -6,6 +6,8 @@
     #logo-mecc {
         height: 350px;
         width: 400px;
+        top: -6vh;
+left: -10vh;
     }
 
     .hero {
@@ -641,14 +643,5 @@ h1.slide-in-left {
     font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
-@media (max-width: 480px) {
-    #scroll-section {
-      height: auto !important;
-    }
-    #scroll-content {
-      transform: none !important;
-      display: flex;
-      flex-direction: column;
-    }
-  }
+
   
