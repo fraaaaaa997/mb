@@ -1,10 +1,15 @@
 /* //\* Responsive *\// */
 /* #988 ------------------------------------------------------------------------------------------------ */
-@media (max-width: 988px) {
+@media (max-width: 1158px) {
 
     #logo-mecc {
+     
+        top: -5vh;
+        left: -3vh;
+
         height: 350px;
         width: 400px;
+
     }
 
     .hero {
@@ -159,9 +164,9 @@
 
     #logo-mecc {
         height: 350px;
+        top: -3vh;
         width: 400px;
-        margin-top: 18vh;
-        left: 3vh;
+  
 
     }
 
@@ -449,8 +454,7 @@
 
         height: 220px;
         width: 301px;
-        top: -4vh;
-        left: 0vh;
+      
 
     }
 
