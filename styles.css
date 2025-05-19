@@ -241,10 +241,10 @@ h5.visible {
 }
 
 #logo-mecc {
-  position: relative;
+  position:fixed;
 top: -4vh;
 left: -8vh;
-
+z-index: 99999;
   height: 500px;
   width: 600px;
 }
