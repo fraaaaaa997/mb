@@ -211,7 +211,7 @@
     .sez-cont-2 {
         padding: 20px;
         font-size: 16px;
-        margin-bottom: 27vh;
+        /* margin-bottom: 27vh; */
     }
 
     .sez-cont-2 ul {
@@ -353,9 +353,9 @@
 
 
 
-    .sez-cont-2 {
+    /* .sez-cont-2 {
         margin-bottom: 10vh;
-    }
+    } */
 
     #disegno {
         font-size: 20px;
