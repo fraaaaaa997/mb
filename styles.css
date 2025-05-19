@@ -76,7 +76,6 @@ h5.visible {
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.921);
-  overflow: hidden;
 }
 
 .hero::before,
@@ -241,12 +240,11 @@ h5.visible {
 }
 
 #logo-mecc {
-  position:fixed;
-top: -4vh;
-left: -8vh;
-z-index: 99999;
-  height: 500px;
-  width: 600px;
+  position:relative;
+top: -23vh;
+left: -5vh;
+  height: 450px;
+  width: 550px;
 }
 
 .slide-in-right {
