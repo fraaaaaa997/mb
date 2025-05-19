@@ -770,7 +770,7 @@ footer.hidden {
 /* Sezione di scroll verticale ------------------------------------------------------------------------ */
 .sticky-wrapper {
   position: relative;
-  height: calc(100vh * 4);
+  height: auto;
   /* numero di sezioni orizzontali */
 }
 
