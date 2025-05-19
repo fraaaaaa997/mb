@@ -790,7 +790,7 @@ footer.hidden {
   width: 400vw; 
   transition: transform 0.1s ease-out;
   will-change: transform;
-  transform: translate3d(0, 0, 0);
+  transform: none;
   transition: transform 0.05s linear; /* opzionale */
   will-change: transform;
 
@@ -810,7 +810,7 @@ footer.hidden {
   gap: 25px;
   border-right: 0.1px solid red;
   border-top: 0.1px solid red;
-  scroll-margin-top: 130vh;
+  /* scroll-margin-top: 130vh; */
   /* <-- questo è l'offset */
 
 
