@@ -773,6 +773,7 @@ footer.hidden {
 .sticky-wrapper {
   position: relative;
   height: auto;
+  /* numero di sezioni orizzontali */
 }
 
 .horizontal-scroll {
@@ -781,7 +782,6 @@ footer.hidden {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-
 }
 
 
@@ -789,12 +789,11 @@ footer.hidden {
 .scroll-content {
   display: flex;
   height: 100vh;   /* fissa all’altezza della viewport */
-  width: calc(100vw * 4); 
-  transition: transform 0.1s ease-out;
-  will-change: transform;
-  transform: none;
-  transition: transform 0.05s linear; /* opzionale */
-  will-change: transform;
+  width: auto; 
+  /* transition: transform 0.1s ease-out; */
+  /* will-change: transform; */
+  /* transform: none; */
+  /* transition: transform 0.05s linear;  */
 
 }
 
