@@ -62,8 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (scrollY >= sectionTop && scrollY < sectionTop + maxScroll) {
         const percentage = relativeScroll / maxScroll;
-        const scrollX = percentage * (scrollContent.scrollWidth - window.innerWidth);
+        let scrollX = percentage * (scrollContent.scrollWidth - window.innerWidth);
+        scrollX = Math.min(scrollX, scrollContent.scrollWidth - window.innerWidth); // evita overscroll
         scrollContent.style.transform = `translateX(-${scrollX}px)`;
+
       } else if (scrollY < sectionTop) {
         scrollContent.style.transform = `translateX(0)`;
       } else {
