@@ -803,7 +803,6 @@ footer.hidden {
   width: 100vw;
   height: 100vh;
   flex-shrink: 0;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
