@@ -228,9 +228,9 @@
 /* 550 - telefono --------------------------------------------------------------------------------------*/
 @media screen and (max-width: 550px) {
 
-    /* body {
+     body {
         background-image: url("img/sfondo-ogg2.png");
-    } */
+    } 
 
     .logo {
         height: 70px;
