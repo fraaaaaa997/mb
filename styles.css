@@ -777,6 +777,8 @@ footer.hidden {
   top: 0;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+
 }
 
 
@@ -806,6 +808,8 @@ footer.hidden {
   justify-content: center;
   align-items: center;
   gap: 25px;
+    border-right: 0.1px solid red;
+  border-top: 0.1px solid red;
   
   /* scroll-margin-top: 130vh; */
   /* <-- questo è l'offset */
