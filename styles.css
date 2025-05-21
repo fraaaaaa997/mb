@@ -785,15 +785,12 @@ footer.hidden {
 
 .scroll-content {
   display: flex;
-  height: 100vh;   /* fissa all’altezza della viewport */
-  width: 400vw; 
-  transition: transform 0.1s ease-out;
+  height: 100vh;
+  transition: transform 0.05s linear;
   will-change: transform;
-  transform: none;
-  transition: transform 0.05s linear; /* opzionale */
-  will-change: transform;
-
+  overflow: hidden; /* evita che scrollino contenuti interni per errore */
 }
+
 
 
 .section {
