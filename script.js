@@ -1,15 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector("footer");
+  const scrollWrapper = document.getElementById("scroll-section");
   const scrollContent = document.getElementById("scroll-content");
-  const sections = scrollContent.querySelectorAll(".section");
-  scrollContent.style.width = `${sections.length * window.innerWidth}px`;
-
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
   const scrollTopBtn = document.getElementById("scrollTopBtn");
-
-
-
 
   let isAtBottom = false;
 
@@ -67,11 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (scrollY >= sectionTop && scrollY < sectionTop + maxScroll) {
         const percentage = relativeScroll / maxScroll;
-        let scrollX = percentage * (scrollContent.scrollWidth - window.innerWidth);
-        scrollX = Math.min(scrollX, scrollContent.scrollWidth - window.innerWidth); // evita overscroll
+        const scrollX = percentage * (scrollContent.scrollWidth - window.innerWidth);
         scrollContent.style.transform = `translateX(-${scrollX}px)`;
-        
-
       } else if (scrollY < sectionTop) {
         scrollContent.style.transform = `translateX(0)`;
       } else {
