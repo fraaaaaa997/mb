@@ -45,17 +45,29 @@ document.addEventListener("DOMContentLoaded", () => {
   let lastScrollY = window.scrollY;
   const navScrollDelta = 4;
   const navShowTopPx = 56;
+  const storyHorizontalScrollMaxPx = 1024;
 
   function setScrollWrapperHeight() {
-    if (scrollWrapper && scrollContent) {
-      const totalScrollDistance = scrollContent.scrollWidth - window.innerWidth;
-      const scrollHeight = (totalScrollDistance / window.innerWidth) * window.innerHeight;
-      scrollWrapper.style.height = `${scrollHeight + window.innerHeight}px`;
+    if (!scrollWrapper || !scrollContent) return;
+
+    if (window.innerWidth <= storyHorizontalScrollMaxPx) {
+      scrollWrapper.style.height = "";
+      scrollContent.style.transform = "";
+      return;
     }
+
+    const totalScrollDistance = scrollContent.scrollWidth - window.innerWidth;
+    const scrollHeight = (totalScrollDistance / window.innerWidth) * window.innerHeight;
+    scrollWrapper.style.height = `${scrollHeight + window.innerHeight}px`;
   }
 
   setScrollWrapperHeight();
-  window.addEventListener("resize", setScrollWrapperHeight);
+
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setScrollWrapperHeight, 150);
+  });
 
   let ticking = false;
 
@@ -116,18 +128,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (scrollWrapper && scrollContent) {
-      const sectionTop = scrollWrapper.offsetTop;
-      const maxScroll = scrollWrapper.offsetHeight - window.innerHeight;
-      const relativeScroll = scrollY - sectionTop;
-
-      if (scrollY >= sectionTop && scrollY < sectionTop + maxScroll) {
-        const percentage = relativeScroll / maxScroll;
-        const scrollX = percentage * (scrollContent.scrollWidth - window.innerWidth);
-        scrollContent.style.transform = `translateX(-${scrollX}px)`;
-      } else if (scrollY < sectionTop) {
-        scrollContent.style.transform = `translateX(0)`;
+      if (window.innerWidth <= storyHorizontalScrollMaxPx) {
+        scrollContent.style.transform = "";
       } else {
-        scrollContent.style.transform = `translateX(-${scrollContent.scrollWidth - window.innerWidth}px)`;
+        const sectionTop = scrollWrapper.offsetTop;
+        const maxScroll = scrollWrapper.offsetHeight - window.innerHeight;
+        const relativeScroll = scrollY - sectionTop;
+
+        if (scrollY >= sectionTop && scrollY < sectionTop + maxScroll) {
+          const percentage = relativeScroll / maxScroll;
+          const scrollX = percentage * (scrollContent.scrollWidth - window.innerWidth);
+          scrollContent.style.transform = `translateX(-${scrollX}px)`;
+        } else if (scrollY < sectionTop) {
+          scrollContent.style.transform = `translateX(0)`;
+        } else {
+          scrollContent.style.transform = `translateX(-${scrollContent.scrollWidth - window.innerWidth}px)`;
+        }
       }
     }
 

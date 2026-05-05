@@ -551,3 +551,19 @@
     }
 
 }
+
+/* La nostra storia: scroll orizzontale / altezza artificiale disattivati su tablet e mobile
+   (evita salti di scroll verticale e ricalcoli continui con la barra URL che mostra/nasconde). */
+@media (max-width: 1024px) {
+    #scroll-section {
+        height: auto !important;
+        overflow: visible;
+    }
+
+    #scroll-content {
+        display: block;
+        transform: none !important;
+        width: auto;
+        overflow: visible;
+    }
+}
