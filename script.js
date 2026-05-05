@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.style.setProperty("--vh-stable", `${window.innerHeight}px`);
+});
+
 (function themeToggleInit() {
   const storageKey = "mb-theme";
 

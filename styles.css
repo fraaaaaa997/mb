@@ -92,6 +92,7 @@ html {
 
 .black {
   height: 100vh;
+  height: var(--vh-stable, 100vh);
   width: 100%;
   background-color: #000;
 }
@@ -106,6 +107,7 @@ body {
   width: 100%;
   height: 100%;
   min-height: 100vh;
+  min-height: var(--vh-stable, 100svh);
 }
 
 h1,
@@ -1345,6 +1347,7 @@ body.theme-light .servizi-esterni__item::before {
   border-bottom: none;
   border-right: none;
   min-height: 100vh;
+  min-height: var(--vh-stable, 100svh);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1509,6 +1512,7 @@ body.theme-light .servizi-esterni__item::before {
 #sez-contatti {
   position: relative;
   min-height: 100vh;
+  min-height: var(--vh-stable, 100svh);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2025,6 +2029,7 @@ body:not(.theme-light) footer .footer-copy {
   position: sticky;
   top: 0;
   height: 100vh;
+  height: var(--vh-stable, 100vh);
   width: auto;
   overflow: hidden;
 }
@@ -2033,7 +2038,8 @@ body:not(.theme-light) footer .footer-copy {
 
 .scroll-content {
   display: flex;
-  height: 100vh;   /* fissa all’altezza della viewport */
+  height: 100vh; /* fissa all’altezza della viewport */
+  height: var(--vh-stable, 100vh);
   width: auto; 
   /* transition: transform 0.1s ease-out; */
   /* will-change: transform; */
@@ -2047,6 +2053,7 @@ body:not(.theme-light) footer .footer-copy {
   position: relative;
   width: 100vw;
   height: calc(var(--vh, 1vh) * 100);
+  height: var(--vh-stable, 100svh);
   flex-shrink: 0;
  padding: 2rem;
   display: flex;
@@ -2176,6 +2183,7 @@ body:not(.theme-light) footer .footer-copy {
 .sottosezione {
   width: 100vw;
   height: 100vh;
+  height: var(--vh-stable, 100vh);
   flex-shrink: 0;
   background-color: #1e1e1e;
   color: white;
@@ -2222,7 +2230,7 @@ body:not(.theme-light) footer .footer-copy {
   width: 100%;
   margin: 0;
   min-height: 100vh;
-  min-height: 100dvh;
+  min-height: var(--vh-stable, 100svh);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2552,12 +2560,12 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   /* Meno dipendenza da vh “saltellante” su browser mobile quando cambia la barra UI */
   .story-strip--text {
     min-height: 100vh;
-    min-height: 100svh;
+    min-height: var(--vh-stable, 100svh);
   }
 
   .story-strip--photos.effect-13 {
-    min-height: 58vh;
-    min-height: min(58svh, 520px);
+    min-height: calc(var(--vh-stable, 100vh) * 0.58);
+    min-height: min(calc(var(--vh-stable, 100vh) * 0.58), 520px);
   }
 }
 
@@ -2568,7 +2576,7 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   margin: 0;
   padding: 0;
   min-height: 70vh;
-  min-height: 70dvh;
+  min-height: calc(var(--vh-stable, 100svh) * 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;

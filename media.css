@@ -18,7 +18,7 @@
     body {
         padding-top: var(--nav-height-stable);
         min-height: 100vh;
-        min-height: 100svh;
+        min-height: var(--vh-stable, 100svh);
     }
 
     nav {
@@ -351,7 +351,7 @@
         padding-top: 21px !important;
         padding-bottom: calc(21px + clamp(4.5rem, 18vw, 7.5rem)) !important;
         min-height: 100vh;
-        min-height: 100svh;
+        min-height: var(--vh-stable, 100svh);
 
     }
 
@@ -422,7 +422,7 @@
         padding: 0px;
         width: 95%;
         min-height: 100vh;
-        min-height: 100svh;
+        min-height: var(--vh-stable, 100svh);
 
     }
 
