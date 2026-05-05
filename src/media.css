@@ -46,6 +46,8 @@
     .nav-links li {
         width: 100%;
         text-align: center;
+        margin: 200px auto;
+
     }
 
     .nav-links a {
@@ -235,6 +237,12 @@
     }
 
 
+    .carousel-container {
+        display: none;
+    }
+
+
+
     .storia-cont {
         font-size: 0.9em;
         padding: 0px;
@@ -253,10 +261,6 @@
 
     .sez-cont-2 ul:not(.servizi-esterni) {
         padding-left: 16px;
-    }
-
-    #servizi {
-        margin-top: -20vh;
     }
 
     .parco-macchine {
@@ -318,7 +322,7 @@
 
     .bottom-right {
         margin: 0 auto;
-        padding: 0;
+        padding: 0 clamp(0.35rem, 3vw, 1rem);
     }
 
     .bottom-right h4 {
@@ -410,7 +414,6 @@
         text-align: right;
         padding-left: 0;
         padding-right: 15px;
-        margin-top: -20vh;
     }
 
 
