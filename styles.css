@@ -2503,6 +2503,53 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   }
 }
 
+/* Mobile / tablet: nessun effetto scroll sulla “nostra storia” (solo contenuto statico; desktop ≥1025px usa JS + CSS sopra) */
+@media (max-width: 1024px) {
+  #storia {
+    transform: none;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+
+  .story-sequence .story-strip__lead {
+    transform: none;
+  }
+
+  .story-sequence .story-strip__p,
+  .story-sequence .story-strip__micro-heading,
+  .story-sequence .story-strip__micro-display,
+  .story-sequence .story-strip__lead-img {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0s !important;
+  }
+
+  html.js-story-init .story-strip--text:not(.story-strip--text-reveal) .story-strip__p,
+  html.js-story-init .story-strip--text:not(.story-strip--text-reveal) .story-strip__micro-heading,
+  html.js-story-init .story-strip--text:not(.story-strip--text-reveal) .story-strip__micro-display,
+  html.js-story-init .story-strip--lead:not(.story-strip--text-reveal) .story-strip__lead-img {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  html.js-story-init .story-strip--text.story-strip--text-reveal .story-strip__p,
+  html.js-story-init .story-strip--text.story-strip--text-reveal .story-strip__micro-heading,
+  html.js-story-init .story-strip--text.story-strip--text-reveal .story-strip__micro-display,
+  html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lead-img {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: 0s !important;
+  }
+
+  .story-strip--photos.effect-13,
+  .effect-13--pair {
+    background-attachment: scroll !important;
+  }
+}
+
 /* Effect 13: fascia foto 70vh — sfondo scroll di default (stabile su mobile / touch) */
 .story-strip--photos.effect-13 {
   position: relative;
