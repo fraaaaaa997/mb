@@ -2,6 +2,38 @@
 /* #988 ------------------------------------------------------------------------------------------------ */
 @media (max-width: 1158px) {
 
+    /*
+      Navbar + offset pagina: NO vh qui su mobile/tablet.
+      Il “large viewport height” cambia quando la barra URL si nasconde → layout che si ridisegna e scroll a scatti.
+    */
+    :root {
+        --nav-height-stable: 76px;
+    }
+
+    html {
+        scroll-behavior: auto;
+        scroll-padding-top: calc(var(--nav-height-stable) + 12px);
+    }
+
+    body {
+        padding-top: var(--nav-height-stable);
+        min-height: 100vh;
+        min-height: 100svh;
+    }
+
+    nav {
+        height: var(--nav-height-stable);
+        min-height: var(--nav-height-stable);
+    }
+
+    /* Evita drag/callout/zoom ritardato sulle foto (effetto “si spostano” al tap) */
+    img {
+        -webkit-user-drag: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        touch-action: manipulation;
+    }
+
     #logo-mecc {
       max-width: min(88vw, 440px);
       max-height: min(34vh, 240px);
@@ -10,6 +42,7 @@
 
     .hero {
         height: min(61vh, 520px);
+        height: min(61svh, 520px);
         min-height: 280px;
     }
 
@@ -21,9 +54,13 @@
         display: flex;
     }
 
+    .realizziamo__category {
+        scroll-margin-top: calc(var(--nav-height-stable) + 20px);
+    }
+
     .nav-links {
         position: absolute;
-        top: 11vh;
+        top: var(--nav-height-stable);
         left: 0;
         width: 100%;
         flex-direction: column;
@@ -33,7 +70,8 @@
         z-index: 1000;
         opacity: 0;
         pointer-events: none;
-        max-height: 87vh;
+        max-height: calc(100vh - var(--nav-height-stable));
+        max-height: calc(100dvh - var(--nav-height-stable));
         overflow-y: auto;
     }
 
@@ -313,6 +351,7 @@
         padding-top: 21px !important;
         padding-bottom: calc(21px + clamp(4.5rem, 18vw, 7.5rem)) !important;
         min-height: 100vh;
+        min-height: 100svh;
 
     }
 
@@ -328,16 +367,19 @@
     .hero {
         height: auto;
         min-height: clamp(320px, 56vh, 450px);
+        min-height: clamp(320px, 56svh, 450px);
         margin: var(--section-gap) auto;
         padding: 10px;
     }
 
     .hero-content {
         gap: clamp(1.5rem, 5vh, 2.4rem);
+        gap: clamp(1.5rem, 5svh, 2.4rem);
     }
 
     .hero-brand {
         gap: clamp(0.85rem, 3vh, 1.4rem);
+        gap: clamp(0.85rem, 3svh, 1.4rem);
     }
 
     .bottom-right p {
@@ -352,7 +394,8 @@
     .mappa-text {
         margin-top: 20px;
         margin-bottom: 0px;
-        min-height: 20vh;
+        min-height: min(20vh, 200px);
+        min-height: min(20svh, 200px);
 
     }
 
@@ -367,7 +410,7 @@
     .contatti-container > .block-section-heading {
         font-size: 27px;
         padding: 10px;
-        margin-top: 5vh !important;
+        margin-top: clamp(1.25rem, 5vw, 3rem) !important;
     }
 
     .sez-contatti {
@@ -379,6 +422,7 @@
         padding: 0px;
         width: 95%;
         min-height: 100vh;
+        min-height: 100svh;
 
     }
 

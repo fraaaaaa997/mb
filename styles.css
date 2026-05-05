@@ -2548,6 +2548,17 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   .effect-13--pair {
     background-attachment: scroll !important;
   }
+
+  /* Meno dipendenza da vh “saltellante” su browser mobile quando cambia la barra UI */
+  .story-strip--text {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  .story-strip--photos.effect-13 {
+    min-height: 58vh;
+    min-height: min(58svh, 520px);
+  }
 }
 
 /* Effect 13: fascia foto 70vh — sfondo scroll di default (stabile su mobile / touch) */
