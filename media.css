@@ -308,10 +308,10 @@
         width: 95%;
         padding: 12px !important;
         margin-top: var(--section-gap) !important;
-        margin-bottom: calc(var(--section-gap) + var(--contatti-margin-bottom)) !important;
+        margin-bottom: calc(var(--section-gap) + var(--contatti-margin-bottom) + clamp(6rem, 22vw, 9rem)) !important;
         margin-inline: auto !important;
         padding-top: 21px !important;
-        padding-bottom: 21px !important;
+        padding-bottom: calc(21px + clamp(4.5rem, 18vw, 7.5rem)) !important;
         min-height: 100vh;
 
     }
@@ -404,6 +404,11 @@
         text-align: center;
         margin-bottom: var(--section-gap);
 
+    }
+
+    /* Titolo "La nostra storia": più aria prima della sequenza editoriale (mobile) */
+    #storia {
+        margin-bottom: calc(var(--section-gap) + clamp(1.75rem, 7vw, 3rem)) !important;
     }
 
     #servizi {

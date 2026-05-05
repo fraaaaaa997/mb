@@ -240,18 +240,35 @@ document.addEventListener("DOMContentLoaded", () => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       storyTextSections.forEach((el) => el.classList.add("story-strip--text-reveal"));
     } else {
-      const storyTextIo = new IntersectionObserver(
-        (entries, obs) => {
+      const narrowMq = window.matchMedia("(max-width: 800px)");
+      function storyIoOptions() {
+        return narrowMq.matches
+          ? { threshold: 0.08, rootMargin: "0px 0px -4% 0px" }
+          : { threshold: 0.15, rootMargin: "0px 0px -10% 0px" };
+      }
+
+      let storyTextIo = null;
+
+      function observeStorySections() {
+        if (storyTextIo) storyTextIo.disconnect();
+        storyTextIo = new IntersectionObserver((entries, obs) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add("story-strip--text-reveal");
               obs.unobserve(entry.target);
             }
           });
-        },
-        { threshold: 0.15, rootMargin: "0px 0px -10% 0px" }
-      );
-      storyTextSections.forEach((el) => storyTextIo.observe(el));
+        }, storyIoOptions());
+        storyTextSections.forEach((el) => storyTextIo.observe(el));
+      }
+
+      observeStorySections();
+
+      if (typeof narrowMq.addEventListener === "function") {
+        narrowMq.addEventListener("change", observeStorySections);
+      } else if (typeof narrowMq.addListener === "function") {
+        narrowMq.addListener(observeStorySections);
+      }
     }
   }
 
