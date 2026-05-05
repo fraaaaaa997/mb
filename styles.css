@@ -2503,7 +2503,7 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   }
 }
 
-/* Effect 13 (parallasse): fascia foto 70vh, overlay leggero, sfondo fisso */
+/* Effect 13: fascia foto 70vh — sfondo scroll di default (stabile su mobile / touch) */
 .story-strip--photos.effect-13 {
   position: relative;
   width: 100%;
@@ -2519,7 +2519,7 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .story-strip--photos.effect-13::before {
@@ -2537,7 +2537,7 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   background-size: 50% 100%, 50% 100%;
   background-position: left center, right center;
   background-repeat: no-repeat, no-repeat;
-  background-attachment: fixed, fixed;
+  background-attachment: scroll, scroll;
 }
 
 /* Una foto */
@@ -2568,11 +2568,6 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
 }
 
 @media (max-width: 1024px) {
-  .story-strip--photos.effect-13,
-  .effect-13--pair {
-    background-attachment: scroll;
-  }
-
   .effect-13--pair {
     background-image: url("img/1972.png");
     background-size: cover;
@@ -2581,10 +2576,21 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   }
 }
 
+/* Parallax (fixed): solo desktop con puntatore hover, mai su touch-first */
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .story-strip--photos.effect-13 {
+    background-attachment: fixed;
+  }
+
+  .effect-13--pair {
+    background-attachment: fixed, fixed;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .story-strip--photos.effect-13,
   .effect-13--pair {
-    background-attachment: scroll;
+    background-attachment: scroll !important;
   }
 }
 

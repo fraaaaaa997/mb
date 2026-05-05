@@ -408,7 +408,7 @@
 
     /* Titolo "La nostra storia": più aria prima della sequenza editoriale (mobile) */
     #storia {
-        margin-bottom: calc(var(--section-gap) + clamp(1.75rem, 7vw, 3rem)) !important;
+        margin-bottom: calc(var(--section-gap) + clamp(3rem, 12vw, 5rem)) !important;
     }
 
     #servizi {
