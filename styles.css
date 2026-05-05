@@ -2567,6 +2567,20 @@ html.js-story-init .story-strip--lead.story-strip--text-reveal .story-strip__lea
   }
 }
 
+@media (max-width: 1024px) {
+  .story-strip--photos.effect-13,
+  .effect-13--pair {
+    background-attachment: scroll;
+  }
+
+  .effect-13--pair {
+    background-image: url("img/1972.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .story-strip--photos.effect-13,
   .effect-13--pair {

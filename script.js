@@ -145,6 +145,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  function closeMenu() {
+    if (!navLinks || !hamburger || !navLinks.classList.contains("active")) return;
+    navLinks.classList.remove("active");
+    hamburger.classList.remove("active");
+    hamburger.setAttribute("aria-expanded", "false");
+    hamburger.setAttribute("aria-label", "Apri il menu");
+  }
+
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", toggleMenu);
     hamburger.addEventListener("keydown", (e) => {
@@ -152,6 +160,10 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         toggleMenu();
       }
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
     });
   }
 
