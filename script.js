@@ -189,39 +189,75 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleScroll();
 
-  const allCarousels = document.querySelectorAll(".carousel-container");
+  const realizCardNodes = Array.from(document.querySelectorAll(".realizziamo-card"));
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const realizGalleryItems = [
+    { src: "https://www.meccanicaberluti.it/temp/image/DSCF0003_.JPG", alt: "Particolare meccanico a disegno", caption: "Particolari a disegno" },
+    { src: "https://www.meccanicaberluti.it/temp/DSCF0053.JPG", alt: "Lavorazione meccanica su tornio", caption: "Particolari a disegno" },
+    { src: "https://www.meccanicaberluti.it/temp/image/03122008505.jpg", alt: "Gruppo meccanico assemblato", caption: "Particolari a disegno" },
+    { src: "https://www.meccanicaberluti.it/temp/image/DSCF0003.JPG", alt: "Dettaglio particolare a disegno", caption: "Particolari a disegno" },
+    { src: "https://www.meccanicaberluti.it/temp/image/premont.jpg", alt: "Premontaggio particolari a disegno", caption: "Particolari a disegno" },
+    { src: "https://www.meccanicaberluti.it/temp/image/php2XxZbLAM.jpg", alt: "Particolare saldato e assemblato", caption: "Particolari a disegno" },
+    { src: "https://www.meccanicaberluti.it/temp/image/phpCtcn8mAM.jpg", alt: "Bocchettone scarico rapido serbatoio Ducati", caption: "Personalizzazioni" },
+    { src: "https://www.meccanicaberluti.it/temp/image/piastre.jpg", alt: "Piastra attacco forcelle a disegno", caption: "Personalizzazioni" },
+    { src: "https://www.meccanicaberluti.it/temp/image/ROBBYMOTO_TappoRacing.jpg", alt: "Tappo serbatoio racing", caption: "Personalizzazioni" },
+    { src: "https://www.meccanicaberluti.it/temp/image/Ale.jpg", alt: "Raiser personalizzati a disegno", caption: "Personalizzazioni" },
+    { src: "https://www.meccanicaberluti.it/temp/image/copmont.JPG", alt: "Coperchio pompa frizione personalizzato", caption: "Personalizzazioni" },
+    { src: "https://www.meccanicaberluti.it/temp/image/innesto%20tubo%20pompa%20freno%20posteriore.jpg", alt: "Innesto tubo pompa freno posteriore", caption: "Personalizzazioni" },
+    { src: "https://www.meccanicaberluti.it/temp/image/phpoIrOJeAM.jpg", alt: "Prototipo meccanico", caption: "Prototipi" },
+    { src: "https://www.meccanicaberluti.it/temp/image/testa.JPG", alt: "Testa per macchina foratrice da legno", caption: "Ricambistica" },
+    { src: "https://www.meccanicaberluti.it/temp/image/cambioestaibile.jpg", alt: "Coperchio cambio estraibile team MotoGP", caption: "Ricambistica" }
+  ];
 
-  allCarousels.forEach((container) => {
-    const carousel = container.querySelector(".carousel");
-    const slides = container.querySelectorAll(".slide");
-    const prevBtn = container.querySelector(".prev");
-    const nextBtn = container.querySelector(".next");
+  if (realizCardNodes.length && realizGalleryItems.length > realizCardNodes.length) {
+    const shownIndexes = new Set();
 
-    if (!carousel || slides.length === 0 || !prevBtn || !nextBtn) return;
-
-    let currentIndex = 0;
-
-    function updateCarousel() {
-      const offset = -currentIndex * 100;
-      carousel.style.transition = "transform 0.5s ease-in-out";
-      carousel.style.transform = `translateX(${offset}%)`;
-
-      slides.forEach((slide) => slide.classList.remove("active"));
-      slides[currentIndex].classList.add("active");
+    function applyItemToCard(card, item) {
+      const image = card.querySelector(".realizziamo-card__image");
+      const caption = card.querySelector(".realizziamo-card__caption");
+      if (!image || !caption) return;
+      image.src = item.src;
+      image.alt = item.alt;
+      caption.textContent = item.caption;
     }
 
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      updateCarousel();
+    realizCardNodes.forEach((card, index) => {
+      shownIndexes.add(index);
+      card.dataset.itemIndex = String(index);
+      applyItemToCard(card, realizGalleryItems[index]);
     });
 
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateCarousel();
-    });
+    function nextAvailableIndex() {
+      for (let i = 0; i < realizGalleryItems.length; i += 1) {
+        if (!shownIndexes.has(i)) return i;
+      }
+      return 0;
+    }
 
-    updateCarousel();
-  });
+    function rotateOneCard() {
+      const card = realizCardNodes[Math.floor(Math.random() * realizCardNodes.length)];
+      const currentIndex = Number(card.dataset.itemIndex || 0);
+      shownIndexes.delete(currentIndex);
+      const nextIndex = nextAvailableIndex();
+      shownIndexes.add(nextIndex);
+      card.dataset.itemIndex = String(nextIndex);
+
+      const updateCard = () => applyItemToCard(card, realizGalleryItems[nextIndex]);
+
+      if (prefersReducedMotion) {
+        updateCard();
+        return;
+      }
+
+      card.classList.add("is-fading");
+      window.setTimeout(() => {
+        updateCard();
+        card.classList.remove("is-fading");
+      }, 320);
+    }
+
+    window.setInterval(rotateOneCard, 3200);
+  }
 
   const observer = new IntersectionObserver(
     (entries) => {
