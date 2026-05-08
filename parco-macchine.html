@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parco macchine | Meccanica Berluti</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="media.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .macchine-gallery { max-width: 1200px; margin: 0 auto 4rem; padding: 0 1.25rem; }
+    .macchine-gallery__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .macchine-gallery__card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; overflow: hidden; }
+    .macchine-gallery__img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #111; }
+    .macchine-gallery__caption { margin: 0; padding: .8rem .9rem; font-size: .86rem; line-height: 1.35; font-weight: 600; color: #f2f2f2; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-cont">
+      <div class="nav-brand"><div class="logo"><a href="index.html"><img id="logo" src="img/logo.png" alt="Meccanica Berluti" /></a></div></div>
+      <div class="nav-actions">
+        <ul class="nav-links">
+          <li><a href="index.html#storia">La nostra storia</a></li>
+          <li class="dropdown">
+            <a href="servizi.html">I nostri servizi</a>
+            <ul class="dropdown-menu">
+              <li><a href="servizi.html#disegno">Particolari a disegno e gruppi assemblati</a></li>
+              <li><a href="servizi.html#personalizza">Personalizzazioni</a></li>
+              <li><a href="servizi.html#proto">Prototipi</a></li>
+              <li><a href="servizi.html#ricambia">Ricambistica</a></li>
+            </ul>
+          </li>
+          <li><a href="parco-macchine.html">Parco macchine</a></li>
+          <li><a href="index.html#sez-mappa">Dove trovarci</a></li>
+          <li><a href="index.html#sez-contatti">Contatti</a></li>
+        </ul>
+        <div class="hamburger" role="button" tabindex="0" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </nav>
+
+  <section><div class="hero"><div class="hero-content"><div class="hero-brand"><a href="index.html"><img src="img/a.png" id="logo-mecc" alt="Logo Meccanica"></a><p class="hero-tagline slide-in-right delay-2">Qualità, esperienza e innovazione,<br><i>dal 1998.</i></p></div><div class="bottom-right"><h4 class="slide-in-right delay-1">Parco macchine</h4><p class="slide-in-right delay-1-5">Tecnologia e precisione</p></div></div></div></section>
+
+  <h5 id="parco-macchine">Parco macchine</h5>
+  <section class="parco-macchine" aria-labelledby="parco-macchine">
+    <header class="parco-macchine__head"><p class="parco-macchine__lead">Il nostro parco macchine è composto da numerosi centri di lavoro verticali, orizzontali, torni CNC e macchinari tradizionali.</p></header>
+  </section>
+
+  <h5>Macchinari in sede</h5>
+  <section class="macchine-gallery" aria-label="Galleria immagini parco macchine">
+    <div class="macchine-gallery__grid">
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/AERRE%204080_CORSE%20800X400X500.png" alt="AERRE 4080_CORSE 800X400X500" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">AERRE 4080_CORSE 800X400X500</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/AERRE%20CL%2055150_CORSE%201500x600x600.png" alt="AERRE CL 55150_CORSE 1500x600x600" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">AERRE CL 55150_CORSE 1500x600x600</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/AERRE%20CL%2070200_CORSE%202000X1600X750.png" alt="AERRE CL 70200_CORSE 2000X1600X750" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">AERRE CL 70200_CORSE 2000X1600X750</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/AVM%20ANGELINI%20DG13_300X800.png" alt="AVM ANGELINI DG13_300X800" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">AVM ANGELINI DG13_300X800</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/CMM%20GALAXY.png" alt="CMM GALAXY" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">CMM GALAXY</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/DOOSAN%20DNM5700_CORSE%201050X570X510.png" alt="DOOSAN DNM5700_CORSE 1050X570X510" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">DOOSAN DNM5700_CORSE 1050X570X510</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/DOOSAN%20DNM5700_CORSE%20800X450X510.png" alt="DOOSAN DNM5700_CORSE 800X450X510" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">DOOSAN DNM5700_CORSE 800X450X510</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/DOOSAN%20DVF500_CORSE%20625X400X450.png" alt="DOOSAN DVF500_CORSE 625X400X450" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">DOOSAN DVF500_CORSE 625X400X450</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/DOOSAN%20HC500_CORSE%20850X700X750.png" alt="DOOSAN HC500_CORSE 850X700X750" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">DOOSAN HC500_CORSE 850X700X750</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/DOOSAN%20PUMA%202600SY%20II_DMAX%20376%20LMAX%20760%20PASSAGGIO%20BARRA%2081.png" alt="DOOSAN PUMA 2600SY II_DMAX 376 LMAX 760 PASSAGGIO BARRA 81" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">DOOSAN PUMA 2600SY II_DMAX 376 LMAX 760 PASSAGGIO BARRA 81</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/FAGIMA%20FAST_CORSE%202000X700X500.png" alt="FAGIMA FAST_CORSE 2000X700X500" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">FAGIMA FAST_CORSE 2000X700X500</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/FAGIMA%20SPIN%20ARROW%20320_CORSE.png" alt="FAGIMA SPIN ARROW 320_CORSE" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">FAGIMA SPIN ARROW 320_CORSE</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/OMV%20BPF3.png" alt="OMV BPF3" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">OMV BPF3</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/SEGA%20KASTO.png" alt="SEGA KASTO" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">SEGA KASTO</figcaption></figure>
+      <figure class="macchine-gallery__card"><img class="macchine-gallery__img" src="site-build/assets/macchine/kitamura_hx400_CORSE%20735X610X610.png" alt="kitamura_hx400_CORSE 735X610X610" loading="lazy" decoding="async"><figcaption class="macchine-gallery__caption">kitamura_hx400_CORSE 735X610X610</figcaption></figure>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col footer-col--legal"><p>P.IVA 02524370422</p><p>Capitale sociale € 100.000,00 i.v.</p></div>
+      <div class="footer-col footer-col--spacer" aria-hidden="true"></div>
+      <div class="footer-col footer-col--regs"><p>Iscritta al R.E.A. di Ancona n. 195095</p><p>Iscritta al Registro Imprese di Ancona n. 02524370422</p></div>
+    </div>
+    <p class="footer-copy"><i>&copy; 2025 <strong>Meccanica Berluti S.R.L</strong> – Tutti i diritti riservati</i></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
