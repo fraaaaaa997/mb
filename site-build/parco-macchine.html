@@ -26,8 +26,8 @@
     }
 
     .macchine-gallery__grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
       gap: 1.1rem 1.1rem;
     }
 
@@ -108,6 +108,11 @@
       text-align: left;
       max-width: none;
     }
+    .parco-macchine__head {
+      max-width: 920px;
+      margin: 0 auto clamp(2.25rem, 5.5vw, 3.75rem);
+      text-align: left;
+    }
 
     @media (min-width: 1024px) {
       .parco-macchine { margin-bottom: 8rem; }
@@ -118,7 +123,7 @@
 
     @media (max-width: 1100px) {
       .macchine-gallery__grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
       }
       .macchine-gallery__img { height: 220px; }
       .macchine-gallery__card:nth-child(3n)::before { display: block; }
@@ -129,7 +134,7 @@
 
     @media (max-width: 620px) {
       .macchine-gallery__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
       }
       .macchine-gallery__img { height: 240px; }
       .macchine-gallery__card::before,
