@@ -20,12 +20,26 @@
     }
 
     .macchine-gallery { max-width: 1200px; margin: 0 auto 4rem; padding: 0 1.25rem; }
-    .macchine-gallery__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .macchine-gallery__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
     .macchine-gallery__card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; overflow: hidden; }
     .macchine-gallery__img { width: 100%; aspect-ratio: 4/3; object-fit: cover; display: block; background: #111; }
     .macchine-gallery__caption { margin: 0; padding: .8rem .9rem; font-size: .86rem; line-height: 1.35; font-weight: 600; color: #f2f2f2; word-break: break-word; }
+    .parco-macchine__lead {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      font-size: clamp(16px, 1.15vw + 14px, 20px);
+      font-weight: 400;
+      line-height: 1.65;
+      letter-spacing: 0.01em;
+      color: rgba(185, 189, 202, 0.96);
+    }
     @media (min-width: 1024px) {
       .macchine-gallery { margin-bottom: 10rem; }
+    }
+    @media (max-width: 1100px) {
+      .macchine-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 620px) {
+      .macchine-gallery__grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
