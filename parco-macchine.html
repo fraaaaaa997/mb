@@ -54,55 +54,74 @@
     .macchine-gallery__card::after {
       content: "";
       position: absolute;
-      left: 0.1rem;
-      right: 0.1rem;
+      left: 0.25rem;
+      right: 0.25rem;
       bottom: 0;
       height: 1px;
       background: linear-gradient(
         90deg,
-        rgba(205, 212, 222, 0) 0%,
-        rgba(205, 212, 222, 0.38) 9%,
-        rgba(205, 212, 222, 0.06) 15%,
-        rgba(205, 212, 222, 0.5) 26%,
-        rgba(205, 212, 222, 0.04) 34%,
-        rgba(205, 212, 222, 0.44) 46%,
-        rgba(205, 212, 222, 0.02) 56%,
-        rgba(205, 212, 222, 0.47) 69%,
-        rgba(205, 212, 222, 0.08) 79%,
-        rgba(205, 212, 222, 0.4) 90%,
-        rgba(205, 212, 222, 0) 100%
+        rgba(216, 223, 232, 0) 0%,
+        rgba(216, 223, 232, 0.78) 5%,
+        rgba(216, 223, 232, 0.78) 14%,
+        rgba(216, 223, 232, 0.04) 19%,
+        rgba(216, 223, 232, 0.04) 27%,
+        rgba(216, 223, 232, 0.7) 31%,
+        rgba(216, 223, 232, 0.7) 36%,
+        rgba(216, 223, 232, 0.03) 43%,
+        rgba(216, 223, 232, 0.03) 52%,
+        rgba(216, 223, 232, 0.74) 58%,
+        rgba(216, 223, 232, 0.74) 66%,
+        rgba(216, 223, 232, 0.02) 72%,
+        rgba(216, 223, 232, 0.02) 83%,
+        rgba(216, 223, 232, 0.8) 88%,
+        rgba(216, 223, 232, 0.8) 94%,
+        rgba(216, 223, 232, 0) 100%
       );
       mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.95) 18%, rgba(0, 0, 0, 0.95) 82%, transparent 100%);
       -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.95) 18%, rgba(0, 0, 0, 0.95) 82%, transparent 100%);
-      opacity: 0.92;
+      opacity: 0.98;
       pointer-events: none;
     }
     .macchine-gallery__card::before {
       content: "";
       position: absolute;
-      top: 0.1rem;
-      bottom: 0.1rem;
+      top: 0.25rem;
+      bottom: 0.25rem;
       right: -0.55rem;
       width: 1px;
       background: linear-gradient(
         180deg,
-        rgba(205, 212, 222, 0) 0%,
-        rgba(205, 212, 222, 0.34) 8%,
-        rgba(205, 212, 222, 0.04) 16%,
-        rgba(205, 212, 222, 0.46) 27%,
-        rgba(205, 212, 222, 0.03) 36%,
-        rgba(205, 212, 222, 0.43) 49%,
-        rgba(205, 212, 222, 0.02) 60%,
-        rgba(205, 212, 222, 0.45) 72%,
-        rgba(205, 212, 222, 0.07) 84%,
-        rgba(205, 212, 222, 0.35) 92%,
-        rgba(205, 212, 222, 0) 100%
+        rgba(216, 223, 232, 0) 0%,
+        rgba(216, 223, 232, 0.74) 6%,
+        rgba(216, 223, 232, 0.74) 13%,
+        rgba(216, 223, 232, 0.03) 18%,
+        rgba(216, 223, 232, 0.03) 31%,
+        rgba(216, 223, 232, 0.69) 36%,
+        rgba(216, 223, 232, 0.69) 42%,
+        rgba(216, 223, 232, 0.02) 49%,
+        rgba(216, 223, 232, 0.02) 58%,
+        rgba(216, 223, 232, 0.77) 64%,
+        rgba(216, 223, 232, 0.77) 71%,
+        rgba(216, 223, 232, 0.04) 79%,
+        rgba(216, 223, 232, 0.04) 87%,
+        rgba(216, 223, 232, 0.72) 92%,
+        rgba(216, 223, 232, 0.72) 96%,
+        rgba(216, 223, 232, 0) 100%
       );
       mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 16%, rgba(0, 0, 0, 0.95) 84%, transparent 100%);
       -webkit-mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 16%, rgba(0, 0, 0, 0.95) 84%, transparent 100%);
-      opacity: 0.86;
+      opacity: 0.94;
       pointer-events: none;
     }
+    .macchine-gallery__card:nth-child(4n+1)::after { left: 0.15rem; right: 0.55rem; }
+    .macchine-gallery__card:nth-child(4n+2)::after { left: 0.45rem; right: 0.2rem; }
+    .macchine-gallery__card:nth-child(4n+3)::after { left: 0.3rem; right: 0.65rem; }
+    .macchine-gallery__card:nth-child(4n)::after { left: 0.6rem; right: 0.25rem; }
+    .macchine-gallery__card:nth-child(5n+1)::before { top: 0.2rem; bottom: 0.7rem; }
+    .macchine-gallery__card:nth-child(5n+2)::before { top: 0.55rem; bottom: 0.25rem; }
+    .macchine-gallery__card:nth-child(5n+3)::before { top: 0.25rem; bottom: 0.45rem; }
+    .macchine-gallery__card:nth-child(5n+4)::before { top: 0.75rem; bottom: 0.2rem; }
+    .macchine-gallery__card:nth-child(5n)::before { top: 0.4rem; bottom: 0.6rem; }
     .macchine-gallery__card:nth-child(3n)::before { display: none; }
     .macchine-gallery__card:nth-child(odd)::after { opacity: 0.7; }
     .macchine-gallery__card:nth-child(3n+2)::after { opacity: 0.92; }
