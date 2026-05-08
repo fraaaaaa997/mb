@@ -209,54 +209,38 @@ document.addEventListener("DOMContentLoaded", () => {
     { src: "https://www.meccanicaberluti.it/temp/image/cambioestaibile.jpg", alt: "Coperchio cambio estraibile team MotoGP", caption: "Ricambistica" }
   ];
 
-  if (realizCardNodes.length && realizGalleryItems.length > realizCardNodes.length) {
-    const shownIndexes = new Set();
+  if (realizCardNodes.length === 8 && realizGalleryItems.length >= 8) {
+    let startIndex = 0;
 
-    function applyItemToCard(card, item) {
-      const image = card.querySelector(".realizziamo-card__image");
-      const caption = card.querySelector(".realizziamo-card__caption");
-      if (!image || !caption) return;
-      image.src = item.src;
-      image.alt = item.alt;
-      caption.textContent = item.caption;
+    function applyWindow() {
+      realizCardNodes.forEach((card, slot) => {
+        const image = card.querySelector(".realizziamo-card__image");
+        const caption = card.querySelector(".realizziamo-card__caption");
+        if (!image || !caption) return;
+        const item = realizGalleryItems[(startIndex + slot) % realizGalleryItems.length];
+        image.src = item.src;
+        image.alt = item.alt;
+        caption.textContent = item.caption;
+      });
     }
 
-    realizCardNodes.forEach((card, index) => {
-      shownIndexes.add(index);
-      card.dataset.itemIndex = String(index);
-      applyItemToCard(card, realizGalleryItems[index]);
-    });
-
-    function nextAvailableIndex() {
-      for (let i = 0; i < realizGalleryItems.length; i += 1) {
-        if (!shownIndexes.has(i)) return i;
-      }
-      return 0;
-    }
-
-    function rotateOneCard() {
-      const card = realizCardNodes[Math.floor(Math.random() * realizCardNodes.length)];
-      const currentIndex = Number(card.dataset.itemIndex || 0);
-      shownIndexes.delete(currentIndex);
-      const nextIndex = nextAvailableIndex();
-      shownIndexes.add(nextIndex);
-      card.dataset.itemIndex = String(nextIndex);
-
-      const updateCard = () => applyItemToCard(card, realizGalleryItems[nextIndex]);
+    function rotateAllCards() {
+      startIndex = (startIndex + 1) % realizGalleryItems.length;
 
       if (prefersReducedMotion) {
-        updateCard();
+        applyWindow();
         return;
       }
 
-      card.classList.add("is-fading");
+      realizCardNodes.forEach((card) => card.classList.add("is-fading"));
       window.setTimeout(() => {
-        updateCard();
-        card.classList.remove("is-fading");
+        applyWindow();
+        realizCardNodes.forEach((card) => card.classList.remove("is-fading"));
       }, 320);
     }
 
-    window.setInterval(rotateOneCard, 3200);
+    applyWindow();
+    window.setInterval(rotateAllCards, 3600);
   }
 
   const observer = new IntersectionObserver(
