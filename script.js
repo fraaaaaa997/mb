@@ -210,14 +210,44 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   if (realizCardNodes.length === 8 && realizGalleryItems.length >= 8) {
-    let startIndex = 0;
+    const slotCount = realizCardNodes.length;
+    const poolSize = realizGalleryItems.length;
+    let currentIndices = [];
 
-    function applyWindow() {
+    function pickUniqueSet(previous = []) {
+      const allIndices = Array.from({ length: poolSize }, (_, i) => i);
+
+      for (let i = allIndices.length - 1; i > 0; i -= 1) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = allIndices[i];
+        allIndices[i] = allIndices[j];
+        allIndices[j] = temp;
+      }
+
+      let next = allIndices.slice(0, slotCount);
+
+      if (previous.length === slotCount && poolSize > slotCount) {
+        const overlap = next.filter((idx) => previous.includes(idx)).length;
+        if (overlap === slotCount) {
+          next = allIndices.slice(1, slotCount + 1);
+        }
+      }
+
+      return next;
+    }
+
+    function applyIndices(indices) {
+      const seen = new Set();
       realizCardNodes.forEach((card, slot) => {
+        let index = indices[slot];
+        if (seen.has(index)) {
+          index = Array.from({ length: poolSize }, (_, i) => i).find((candidate) => !seen.has(candidate));
+        }
+        seen.add(index);
         const image = card.querySelector(".realizziamo-card__image");
         const caption = card.querySelector(".realizziamo-card__caption");
         if (!image || !caption) return;
-        const item = realizGalleryItems[(startIndex + slot) % realizGalleryItems.length];
+        const item = realizGalleryItems[index];
         image.src = item.src;
         image.alt = item.alt;
         caption.textContent = item.caption;
@@ -225,21 +255,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function rotateAllCards() {
-      startIndex = (startIndex + 1) % realizGalleryItems.length;
+      const nextIndices = pickUniqueSet(currentIndices);
 
       if (prefersReducedMotion) {
-        applyWindow();
+        applyIndices(nextIndices);
+        currentIndices = nextIndices;
         return;
       }
 
       realizCardNodes.forEach((card) => card.classList.add("is-fading"));
       window.setTimeout(() => {
-        applyWindow();
+        applyIndices(nextIndices);
+        currentIndices = nextIndices;
         realizCardNodes.forEach((card) => card.classList.remove("is-fading"));
       }, 320);
     }
 
-    applyWindow();
+    currentIndices = pickUniqueSet();
+    applyIndices(currentIndices);
     window.setInterval(rotateAllCards, 3600);
   }
 
